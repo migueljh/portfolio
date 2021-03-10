@@ -53,7 +53,7 @@ const Footer = () => {
               color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
             }}
           >
-            {language ? language === "en" : language.value === "en"  ? en.theme : es.theme}
+            {language === "en" /* || language.value === "en" */  ? en.theme : es.theme}
           </p>
           <p style={{ marginLeft: "20px" }}>
             <Switch
@@ -80,7 +80,7 @@ const Footer = () => {
                     paddingRight: 0,
                   }}
                 >
-                  {language.value === "en" || language === "en"  ? en.dark : es.dark}
+                  {/* language.value === "en" ||  */language === "en"  ? en.dark : es.dark}
                 </div>
               }
               uncheckedIcon={
@@ -96,7 +96,7 @@ const Footer = () => {
                     paddingRight: 0,
                   }}
                 >
-                  {language.value === "en" || language === "en"  ? en.light : es.light}
+                  {/* language.value === "en" ||  */language === "en"  ? en.light : es.light}
                 </div>
               }
               checkedHandleIcon={
@@ -140,7 +140,7 @@ const Footer = () => {
               marginTop: "0px",
             }}
           >
-            {language.value === "en" || language === "en"  ? en.talk : es.talk}
+            {/* language.value === "en" ||  */language === "en"  ? en.talk : es.talk}
           </p>
 
           <div className={styles.iconsRow}>
@@ -167,7 +167,7 @@ const Footer = () => {
               color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
             }}
           >
-            {language.value === "en" || language === "en"  
+            {/* language.value === "en" ||  */language === "en"  
               ? en.language
               : es.language}
           </p>
@@ -179,7 +179,7 @@ const Footer = () => {
             icon="language"
             options={languages}
             text={
-              language.value === "en" || language === "en"  
+              /* language.value === "en" ||  */language === "en"  
                 ? "English"
                 : "Español"
             }
@@ -203,7 +203,7 @@ const Footer = () => {
             marginBottom: "40px",
           }}
         >
-          {language.value === "en" || language === "en"  ? en.credits : es.credits}
+          {/* language.value === "en" ||  */language === "en"  ? en.credits : es.credits}
         </p>
       </div>
     </div>
