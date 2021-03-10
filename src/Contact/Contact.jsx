@@ -231,7 +231,7 @@ const Contact = () => {
               marginBottom: "10px"
             }}
           >
-            {/* language.value === "en" ||  */language === "en"  ? en.title : es.title}
+            { language.value === "en" || language === "en"  ? en.title : es.title}
           </p>
         </div>
         <div className={styles.flexContainer}>
@@ -242,7 +242,7 @@ const Contact = () => {
               width: "80%"
             }}
           >
-            {/* language.value === "en" ||  */language === "en"  ? en.subtitle : es.subtitle}
+            { language.value === "en" || language === "en"  ? en.subtitle : es.subtitle}
           </p>
         </div>
         <div>
@@ -278,13 +278,13 @@ const Contact = () => {
                           : "1.5px solid #fb5c5b",
                     }}
                   >
-                    <span className={styles.contentName}> {/* language.value === "en" ||  */language === "en"  ? en.name : es.name} </span>
+                    <span className={styles.contentName}> { language.value === "en" || language === "en"  ? en.name : es.name} </span>
                   </label>
                 </div>
               </div>
               <div className={styles.btnContainer}>
                 <ButtonContinue theme={theme} onClick={firstContinue}>
-                  <p className={styles.btn}>{/* language.value === "en" ||  */language === "en"  ? en.continue : es.continue}</p>
+                  <p className={styles.btn}>{ language.value === "en" || language === "en"  ? en.continue : es.continue}</p>
                 </ButtonContinue>
               </div>
             </>
@@ -319,13 +319,13 @@ const Contact = () => {
                           : "1.5px solid #fb5c5b",
                     }}
                   >
-                    <span className={styles.contentName}> {/* language.value === "en" ||  */language === "en"  ? en.email : es.email} </span>
+                    <span className={styles.contentName}> { language.value === "en" || language === "en"  ? en.email : es.email} </span>
                   </label>
                 </div>
               </div>
               <div className={styles.btnContainer}>
                 <ButtonContinue theme={theme} onClick={secondContinue}>
-                  <p className={styles.btn}>{/* language.value === "en" ||  */language === "en"  ? en.continue : es.continue}</p>
+                  <p className={styles.btn}>{ language.value === "en" || language === "en"  ? en.continue : es.continue}</p>
                 </ButtonContinue>
               </div>
             </>
@@ -364,13 +364,13 @@ const Contact = () => {
                           : "1.5px solid #fb5c5b",
                     }}
                   >
-                    <span className={styles.contentName}> {/* language.value === "en" ||  */language === "en"  ? en.message : es.message} </span>
+                    <span className={styles.contentName}> { language.value === "en" || language === "en"  ? en.message : es.message} </span>
                   </label>
                 </div>
               </div>
               <div className={styles.btnContainer}>
                 <ButtonSubmit theme={theme} onClick={sendEmail}>
-                  <p className={styles.btn}>{/* language.value === "en" ||  */language === "en"  ? en.submit : es.submit}</p>
+                  <p className={styles.btn}>{ language.value === "en" || language === "en"  ? en.submit : es.submit}</p>
                 </ButtonSubmit>
               </div>
 
@@ -390,7 +390,7 @@ const Contact = () => {
                         fontWeight: "800",
                       }}
                     >
-                      {/* language.value === "en" ||  */language === "en"  ? en.alert_msg : es.alert_msg}
+                      { language.value === "en" || language === "en"  ? en.alert_msg : es.alert_msg}
                     </span>
                     <div className={styles.flexRow}>
                       <Link to="/">
@@ -399,7 +399,7 @@ const Contact = () => {
                           style={{ width: "140px" }}
                         >
                           <p className={styles.btnAlertText}>
-                          {/* language.value === "en" ||  */language === "en"  ? en.home : es.home}
+                          { language.value === "en" || language === "en"  ? en.home : es.home}
                             <i
                               className="fas fa-home"
                               style={{ marginLeft: "5px" }}
@@ -413,7 +413,7 @@ const Contact = () => {
                         style={{ marginLeft: "10px" }}
                       >
                         <p className={styles.btnAlertText}>
-                        {/* language.value === "en" ||  */language === "en"  ? en.send_another : es.send_another}
+                        { language.value === "en" || language === "en"  ? en.send_another : es.send_another}
                           <i
                             className="fas fa-edit"
                             style={{ marginLeft: "5px" }}

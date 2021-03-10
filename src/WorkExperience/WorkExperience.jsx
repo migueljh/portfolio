@@ -37,9 +37,9 @@ const WorkExperience = () => {
               color: theme === "light" ? "#333" : "rgb(146, 145, 145)",
             }}
           >
-            {/* language.value === "en" ||  */language === "en"  ? en.title : es.title}
+            { language.value === "en" || language === "en"  ? en.title : es.title}
             <br />
-            {/* language.value === "en" ||  */language === "en"  ? en.subtitle : es.subtitle}
+            { language.value === "en" || language === "en"  ? en.subtitle : es.subtitle}
           </p>
         </div>
         <div className={styles.flexContainer}>
@@ -51,7 +51,7 @@ const WorkExperience = () => {
             }}
           >
             <br />
-            {/* language.value === "en" ||  */language === "en"  ? en.description : es.description}
+            { language.value === "en" || language === "en"  ? en.description : es.description}
           </p>
         </div>
         <div className={styles.secondFlexContainer}>
@@ -61,7 +61,7 @@ const WorkExperience = () => {
               color: theme === "light" ? "#333" : "rgb(146, 145, 145)",
             }}
           >
-            {/* language.value === "en" ||  */language === "en"  ? en.invitation : es.invitation}
+            { language.value === "en" || language === "en"  ? en.invitation : es.invitation}
           </p>
           <a href={resume}>
             <div className={styles.flexContainer}>
@@ -82,7 +82,7 @@ const WorkExperience = () => {
                 color: theme === "light" ? "#333" : "rgb(146, 145, 145)",
               }}
             >
-              {/* language.value === "en" ||  */language === "en"  ? en.download : es.download}
+              { language.value === "en" || language === "en"  ? en.download : es.download}
             </p>
           </a>
         </div>
@@ -94,7 +94,7 @@ const WorkExperience = () => {
                 color: theme === "light" ? "#333" : "rgb(146, 145, 145)",
               }}
             >
-              {/* language.value === "en" ||  */language === "en"  ? en.accenture_position : es.accenture_position}
+              { language.value === "en" || language === "en"  ? en.accenture_position : es.accenture_position}
               {theme === "light" ? (
                 <img
                   src={accentureLight}
@@ -116,7 +116,7 @@ const WorkExperience = () => {
                 marginTop: "20px"
               }}
             >
-             {/* language.value === "en" ||  */language === "en"  ? en.accenture_job_description : es.accenture_job_description}
+             { language.value === "en" || language === "en"  ? en.accenture_job_description : es.accenture_job_description}
             </p>
           </div>
 
@@ -127,7 +127,7 @@ const WorkExperience = () => {
                 color: theme === "light" ? "#333" : "rgb(146, 145, 145)",
               }}
             >
-              {/* language.value === "en" ||  */language === "en"  ? en.ibm_position : es.ibm_position}
+              { language.value === "en" || language === "en"  ? en.ibm_position : es.ibm_position}
 
               {theme === "light" ? (
                 <img src={ibmLight} className={styles.imgIBM}/>
@@ -147,7 +147,7 @@ const WorkExperience = () => {
                 marginTop: "20px"
               }}
             >
-              {/* language.value === "en" ||  */language === "en"  ? en.ibm_job_description : es.ibm_job_description}
+              { language.value === "en" || language === "en"  ? en.ibm_job_description : es.ibm_job_description}
             </p>
           </div>
         </div>

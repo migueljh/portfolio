@@ -40,21 +40,21 @@ const Projects = () => {
   const onMouseOverEcommerce = () => {
     setText({
       ...text,
-      textEcommerce: /* language.value === "en" ||  */language === "en"  ? en.ecommerce : es.ecommerce,
+      textEcommerce:  language.value === "en" || language === "en"  ? en.ecommerce : es.ecommerce,
     });
   };
 
   const onMouseOverMoba = () => {
     setText({
       ...text,
-      textMoba: /* language.value === "en" ||  */language === "en"  ? en.moba : es.moba,
+      textMoba:  language.value === "en" || language === "en"  ? en.moba : es.moba,
     });
   };
 
   const onMouseOverWeather = () => {
     setText({
       ...text,
-      textWeather: /* language.value === "en" ||  */language === "en"  ? en.weather : es.weather,
+      textWeather:  language.value === "en" || language === "en"  ? en.weather : es.weather,
     });
   };
 
@@ -62,7 +62,7 @@ const Projects = () => {
     setText({
       ...text,
       textMovie:
-      /* language.value === "en" ||  */language === "en"  ? en.movies : es.movies
+       language.value === "en" || language === "en"  ? en.movies : es.movies
     });
   };
 
@@ -99,7 +99,7 @@ const Projects = () => {
               color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
             }}
           >
-            {/* language.value === "en" ||  */language === "en"  ? en.title : es.title}
+            { language.value === "en" || language === "en"  ? en.title : es.title}
           </p>
         </div>
         <div className={styles.container}>
@@ -110,7 +110,7 @@ const Projects = () => {
               width: "50%",
             }}
           >
-            {/* language.value === "en" ||  */language === "en"  ? en.subtitle : es.subtitle}
+            { language.value === "en" || language === "en"  ? en.subtitle : es.subtitle}
           </p>
         </div>
         <div className={styles.container}>
@@ -122,7 +122,7 @@ const Projects = () => {
               marginTop: "20px",
             }}
           >
-            {/* language.value === "en" ||  */language === "en"  ? en.filter : es.filter}
+            { language.value === "en" || language === "en"  ? en.filter : es.filter}
           </p>
         </div>
         <div className={styles.rowFilter}>
@@ -410,13 +410,13 @@ const Projects = () => {
             ></span>
             <span className={styles.msg}>
               {textAlert === "ecommerce"
-                ? /* language.value === "en" ||  */language === "en"  ? en.ecommerce_alert : es.ecommerce_alert
+                ?  language.value === "en" || language === "en"  ? en.ecommerce_alert : es.ecommerce_alert
                 : textAlert === "moba"
-                ? /* language.value === "en" ||  */language === "en"  ? en.moba_alert : es.moba_alert
+                ?  language.value === "en" || language === "en"  ? en.moba_alert : es.moba_alert
                 : textAlert === "weather"
-                ? /* language.value === "en" ||  */language === "en"  ? en.weather_alert : es.weather_alert
+                ?  language.value === "en" || language === "en"  ? en.weather_alert : es.weather_alert
                 : textAlert === "movies"
-                ? /* language.value === "en" ||  */language === "en"  ? en.movies_alert : es.movies_alert
+                ?  language.value === "en" || language === "en"  ? en.movies_alert : es.movies_alert
                 : null}
             </span>
             <span className={styles.closeBtn}>
