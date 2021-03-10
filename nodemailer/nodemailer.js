@@ -5,6 +5,7 @@ const server = express();
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(cors());
+let port = process.env.PORT || 8080
 
 server.post("/send-email", (req, res) => { 
   const { name, email, message } = req.body;
@@ -38,6 +39,6 @@ server.post("/send-email", (req, res) => {
   });
 });
 
-server.listen(process.env.PORT, () => {
-  console.log("server running");
+server.listen(port, () => {
+  console.log("server running in port");
 });
