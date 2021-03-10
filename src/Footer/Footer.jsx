@@ -150,7 +150,7 @@ const Footer = () => {
                 color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
               }}
             ></i>
-            <i
+            <i 
               class="fab fa-linkedin fa-2x"
               style={{
                 paddingLeft: "15px",
