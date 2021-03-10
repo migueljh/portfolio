@@ -6,7 +6,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(cors());
 
-server.post("/send-email", (req, res) => {
+server.post("/send-email", (req, res) => { 
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
