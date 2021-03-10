@@ -145,7 +145,7 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          {language.value === "en" || language === "en"  ? en.home : es.home}
+                          {/* language.value === "en" ||  */language === "en"  ? en.home : es.home}
                         </p>
                         <div
                           className={styles.lineOne}
@@ -168,7 +168,7 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          {language.value === "en" || language === "en"  ? en.projects : es.projects}
+                          {/* language.value === "en" ||  */language === "en"  ? en.projects : es.projects}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div
@@ -193,7 +193,7 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          {language.value === "en" || language === "en"  ? en.resume : es.resume}
+                          {/* language.value === "en" ||  */language === "en"  ? en.resume : es.resume}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div
@@ -219,7 +219,7 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          {language.value === "en" || language === "en"  ? en.contact : es.contact}
+                          {/* language.value === "en" ||  */language === "en"  ? en.contact : es.contact}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div
