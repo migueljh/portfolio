@@ -33,10 +33,10 @@ const Home = () => {
             {/* <div style={{ width: "500px" }}> */}
               <p className={styles.smallIntro}>
                 {" "}
-                { language.value === "en" || language === "en"  ? en.title : es.title}
+                { /* language.value === "en" ||  */language === "en"  ? en.title : es.title}
               </p>
               <p className={styles.smallIntroTwo}>
-              { language.value === "en" || language === "en"  ? <p>here you can contact me, and here you can download my resume</p>:<p>aquí puedes contactarme y aquí puedes descargar mi CV</p>}
+              { /* language.value === "en" ||  */language === "en"  ? <p>here you can contact me, and here you can download my resume</p>:<p>aquí puedes contactarme y aquí puedes descargar mi CV</p>}
               </p>
             {/* </div> */}
             

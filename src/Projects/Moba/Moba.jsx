@@ -168,7 +168,7 @@ const Henryfy = () => {
               theme === "dark" ? "5px solid white" : "5px solid #521886",
           }}
         >
-          { language.value === "en" || language === "en"  ? en.title : es.title}
+          { /* language.value === "en" ||  */language === "en"  ? en.title : es.title}
         </p>
       </div>
       <div className={styles.flexContainer} style={{ flexDirection: "row" }}>
@@ -179,7 +179,7 @@ const Henryfy = () => {
               marginTop: "18px",
             }}
           >
-            { language.value === "en" || language === "en"  ? en.demo : es.demo}
+            { /* language.value === "en" ||  */language === "en"  ? en.demo : es.demo}
           </p>
           <i
             className="fab fa-youtube"
@@ -197,7 +197,7 @@ const Henryfy = () => {
               marginTop: "18px",
             }}
           >
-            { language.value === "en" || language === "en"  ? en.repository : es.repository}
+            { /* language.value === "en" ||  */language === "en"  ? en.repository : es.repository}
           </p>
           <i
             className="fab fa-github"
@@ -223,7 +223,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { language.value === "en" || language === "en"  ? en.friendly_app : es.friendly_app}
+          { /* language.value === "en" ||  */language === "en"  ? en.friendly_app : es.friendly_app}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -234,14 +234,14 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.friendly_app_description
             : es.friendly_app_description}
 
           <p style={{ color: theme === "dark" ? "white" : "#521886" }}>
-            { language.value === "en" || language === "en"  ? en.languages : es.languages}
+            { /* language.value === "en" ||  */language === "en"  ? en.languages : es.languages}
           </p>
-          { language.value === "en" || language === "en"  ? en.designed : es.designed}
+          { /* language.value === "en" ||  */language === "en"  ? en.designed : es.designed}
           <p style={{ color: theme === "dark" ? "white" : "#521886" }}>Figma</p>
         </p>
       </div>
@@ -260,7 +260,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { language.value === "en" || language === "en"  ? en.title_register : es.title_register}
+          { /* language.value === "en" ||  */language === "en"  ? en.title_register : es.title_register}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -271,7 +271,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.register_description
             : es.register_description}
         </p>
@@ -303,7 +303,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { language.value === "en" || language === "en"  ? en.add_money_title : es.add_money_title}
+          { /* language.value === "en" ||  */language === "en"  ? en.add_money_title : es.add_money_title}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -314,7 +314,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.add_money_description
             : es.add_money_description}
         </p>
@@ -343,7 +343,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { language.value === "en" || language === "en"  ? en.statistics : es.statistics}
+          { /* language.value === "en" ||  */language === "en"  ? en.statistics : es.statistics}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -354,7 +354,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.statistics_description
             : es.statistics_description}
         </p>
@@ -380,7 +380,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { language.value === "en" || language === "en"  ? en.virtual_card : es.virtual_card}
+          { /* language.value === "en" ||  */language === "en"  ? en.virtual_card : es.virtual_card}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -391,7 +391,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.virtual_card_description
             : es.virtual_card_description}
         </p>
@@ -417,7 +417,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.transactions_title
             : es.transactions_title}
         </p>
@@ -430,7 +430,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.transactions_description
             : es.transactions_description}
         </p>
@@ -459,7 +459,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.transfer_unregister
             : es.transfer_unregister}
         </p>
@@ -472,7 +472,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.transfer_unregister_description
             : es.transfer_unregister_description}
         </p>
@@ -500,7 +500,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { language.value === "en" || language === "en"  
+          { /* language.value === "en" ||  */language === "en"  
             ? en.transfer_unregister_description_2
             : es.transfer_unregister_description_2}
         </p>{" "}
