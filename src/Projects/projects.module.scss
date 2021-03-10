@@ -1,0 +1,395 @@
+.projectContainer {
+  width: 100%;
+ 
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.rowFilter {
+  line-height: 60px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.rowFilter p {
+  padding-left: 90px;
+}
+
+.rowColumn {
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, 0.15);
+    height: 80px;
+    align-items: center;
+    display: flex;
+    width: 300px;
+}
+
+.rowColumn p {
+  margin-top: 0px;
+  width: 200px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: #fff;
+  z-index: 1;
+  margin: 0px 0px;
+}
+
+.rowColumn p:hover {
+  transform: scale(0.98);
+  cursor: pointer;
+  color: rgb(170, 169, 169);
+}
+
+.lineOne {
+  height: 78px;
+  width: 0;
+  background-color: #2e2e2e;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 0px;
+  transition: width 0.5s ease-out;
+}
+
+.lineTwo {
+  height: 70px;
+  margin-top: -60px;
+  width: 290px;
+  margin-left: 0px;
+}
+
+.rowFilter span:hover .lineOne {
+  width: 298px;
+}
+
+.textTitle {
+  color: rgb(146, 145, 145);
+  font-size: 40px;
+  font-weight: 800;
+  margin-top: 80px;
+  animation: anim_projects 10s forwards;
+}
+
+.textSubTitle {
+  color: rgb(146, 145, 145);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.projectsRow {
+  height: 200px;
+  width: 350px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  text-align: center;
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, 0.15), 2px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projectsRowTitle {
+  background-color: #474343;
+  height: 22px;
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(170, 169, 169);
+  width: 100%;
+}
+
+.projectsRowTitle i {
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+  margin-top: -19px;
+  margin-right: 10px;
+}
+
+.projectsRowSubTitle {
+  height: 20px;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 900;
+  color: rgb(170, 169, 169);
+  width: 300px;
+  margin-left: 20px;
+}
+
+.curtain {
+  width: 350px;
+  position: absolute;
+  height: 180px;
+  margin-top: -179px;
+  background-color: transparent;
+  z-index: 1;
+  &:hover {
+    height: 180px;
+    cursor: pointer;
+    animation: anim 1s forwards;
+  }
+}
+
+.curtainBelow {
+  width: 350px;
+  position: absolute;
+  height: 180px;
+  margin-top: -181px;
+  background-color: transparent;
+  z-index: 1;
+  &:hover {
+    height: 180px;
+    cursor: pointer;
+    animation: anim2 1s forwards;
+  }
+}
+
+.alert {
+  background-color: #fff;
+  padding: 20px 40px;
+  min-width: 120px;
+  position: fixed;
+  height: 10px;
+  right: 35%;
+  top: 50%;
+  border-radius: 4px;
+  border-left: 8px solid rgb(146, 145, 145);
+  overflow: hidden;
+  border-top: 3px solid rgb(146, 145, 145);
+  border-bottom: 3px solid rgb(146, 145, 145);
+  /* border-right: 3px solid rgb(146, 145, 145); */
+  z-index: 999;
+}
+
+.alert .fa-exclamation-circle {
+  position: absolute;
+  margin-left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(146, 145, 145);
+  font-size: 30px;
+}
+
+.alert .msg {
+  font-size: 18px;
+  padding: 0px 20px;
+  margin-right: 10px;
+  color: rgb(146, 145, 145);
+  font-weight: 700;
+}
+
+
+.alert.show {
+  animation: show_slide 1s ease forwards;
+}
+
+.alert.hide {
+  display: none;
+}
+
+.alert .closeBtn {
+  background-color: rgb(146, 145, 145);
+  right: 0px;
+  top: 10px;
+  transform: translateY(-50%);
+  padding: 20px 18px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.closeBtn .fa-times {
+  color: rgb(146, 145, 145);
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.closeBtn:hover {
+  background: rgb(146, 145, 145);
+}
+
+#exclamationCircle {
+  position: absolute;
+  margin-left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(146, 145, 145);
+  font-size: 30px;
+}
+
+#exclamationCircleOpen {
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  margin-top: 35px;
+}
+
+#times {
+  font-size: 22px;
+  line-height: 40px;
+  margin-top: 30px;
+}
+
+.containerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 60px;
+  width: 70%;
+  margin-left: 200px;
+}
+
+.imgFirstRow {
+  height: 178px;
+  margin-top: 0px;
+  margin-left: -1px;
+}
+
+.imgSecondRow {
+  height: 179px;
+  margin-top: 0px;
+  width: 200px;
+  margin-left: -1px;
+}
+
+/* animations */
+
+@keyframes anim {
+  0% {
+    top: 198px;
+    background-color: transparent;
+    height: 180px;
+    opacity: 0.7;
+  }
+  100% {
+    top: 201px;
+    background-color: black;
+    height: 180px;
+    opacity: 0.9;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    top: 200px;
+    background-color: transparent;
+    height: 180px;
+    opacity: 0.7;
+  }
+  100% {
+    top: 203px;
+    background-color: black;
+    height: 180px;
+    opacity: 0.9;
+  }
+}
+
+@keyframes alertShow {
+  0% {
+    top: 10%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes alertHide {
+  0% {
+    top: 10%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+
+@keyframes show_slide {
+  0% {
+    transform: translateY(100%);
+  }
+  0% {
+    transform: translateY(-10%);
+  }
+  0% {
+    transform: translateY(0%);
+  }
+  0% {
+    transform: translateY(-10px);
+  }
+}
+
+/* responsive */
+
+@media only screen and (max-width: 800px) {
+  .container{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .rowColumn{
+    width: 85px;
+    text-align: center;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .rowColumn p{
+    margin-left: -80px;
+    font-size: 10px;
+    white-space: pre-line
+  }
+  .rowColumn .bootstrap{
+    margin-left: -84px
+  }
+  .lineOne {
+    margin-left: 1px;
+   
+  }
+  
+  .lineTwo {
+    margin-top: -60px;
+    width: 10px;
+    margin-left: 0px;
+  }
+  
+  .rowFilter span:hover .lineOne {
+    width: 84px;
+  }
+  .containerRow {
+    display: flex;
+    flex-direction: column;
+    justify-content:unset;
+    align-items: center;
+    margin-top: 60px;
+    width: 70%;
+    margin-left:55px;
+  }
+
+  .curtainBelow{
+    display: none;
+  }
+  .projectsRowSubTitle{
+    display: none;
+  }
+  .curtain{
+    display: none;
+  }
+  #infoIcon{
+    display: none;
+  }
+  #secondContainerRow{
+    margin-top: 0px;
+  }
+}

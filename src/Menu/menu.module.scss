@@ -1,0 +1,241 @@
+.header{
+  padding: 40px 50px;
+}
+
+.logo{
+  float: left;
+  margin-top: 0
+}
+
+.logo img{
+  width: 70px;
+  height: 70px;
+  margin-top: -15px;
+}
+
+.styledMenuContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.menu {
+  font-size: 14px;
+  color: white;
+  letter-spacing: 2px;
+  margin-right: 150px;
+  transition: all 0.6s var(--animation-curve);
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  margin-left: 100px;
+}
+
+.containerList {
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  font-size: 44px;
+  color: white;
+  letter-spacing: 2px;
+  right: 0px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: #5a5a5a;
+  font-weight: 700;
+  animation: animSubContainer 1s forwards;
+}
+
+.containerListTwo {
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  font-size: 44px;
+  color: white;
+  letter-spacing: 2px;
+  margin-top: -92px;
+  right: 0px;
+  /* background-color: #333; */
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: #5a5a5a;
+  font-weight: 700;
+  animation: animSubContainer 1s forwards;
+}
+
+.backgroundDark{
+  background-color: #333;
+}
+
+.backgroundLight{
+  background-color: white;
+}
+
+.subContainerList li:hover {
+  cursor: pointer;
+}
+
+.subContainerList p {
+  position: absolute;
+  z-index: 1;
+  margin: 0px 0px;
+  left: 150px;
+}
+
+.subContainerList li:hover .lineOne {
+  width: 400px;
+}
+
+.subContainerList {
+  height: 350px;
+  width: 400px;
+  line-height: 80px;
+  animation: animSubContainer 2s forwards;
+  margin-top: 100px;
+}
+
+.textList {
+  position: relative;
+  left: -100%;
+  animation: animTextList 0s forwards;
+  top: 30px;
+}
+
+
+.lineOne {
+  height: 70px;
+  width: 0;
+  background-color: #262626;
+  position: absolute;
+  margin-left: -85px;
+  transition: width 0.5s ease-out;
+}
+
+.lineTwo {
+  height: 70px;
+  width: 400px;
+  margin-left: -85px;
+}
+
+.icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon i {
+  left: 100px;
+}
+
+input {
+  visibility: hidden;
+}
+
+:root {
+  --animation-curve: cubic-bezier(1, 0, 0, 1);
+}
+
+.containerList a {
+  color: #5a5a5a;
+}
+
+.containerList a:hover {
+  color: #5a5a5a;
+}
+
+#iconTheme{
+  padding-left: 30px;
+  color: black;
+  margin-top: 5px;
+}
+
+.imgTheme{
+  width: 40px;
+  height: 40px;
+}
+
+
+
+/* animations */
+
+@keyframes inAnimation {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes animTextList {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes animSubContainer {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 800px) {
+  .styledMenuContainer{
+    margin-right: 0px;
+  }
+
+  .logo img{
+    margin-left: -20px;
+  }
+
+  .lineTwo{
+    width: 350px;
+    margin-left: -60px;
+  }
+
+  .subContainerList{
+    margin-top: 150px;
+  }
+  
+  .menuText{
+    margin-left: -10px;
+  }
+
+  .lineOne {
+    margin-left: -60px;
+  }
+
+  .subContainerList li:hover .lineOne {
+    width: 350px;
+  }
+}

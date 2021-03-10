@@ -1,0 +1,178 @@
+.home {
+  display: flex;
+  flex-direction: row;
+}
+
+.home .container {
+  max-width: 1266px;
+  margin: 0 auto;
+}
+
+.home .person {
+  margin: 0px 180px 0;
+  border-radius: 70px 0 70px 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.portrait {
+  width: 400px;
+  height: 450px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  /* border-radius: 4000px; */
+}
+
+.homeText {
+  color: #fff;
+  width: 100%;
+  margin-left: 50px;
+  margin-top: 150px;
+  /* position: absolute; */
+}
+
+.homeText h6 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 15px;
+  animation: anim_subtext 3s forwards;
+}
+
+.homeText h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  animation: anim_text 3s forwards;
+}
+
+.smallIntro {
+  font-size: 16px;
+  margin-top: 30px;
+  animation: anim_textbelow 3s steps(100);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.smallIntroTwo {
+  font-size: 16px;
+  margin-top: -10px;
+  animation: anim_textbelowtwo 4s steps(100);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes anim_text {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes anim_subtext {
+  from {
+    margin-left: -600%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes anim_textbelow {
+  from {
+    margin-left: -700%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes anim_textbelowtwo {
+  from {
+    margin-left: -800%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1200px) {
+  .homeText{
+    /* margin-left: 10px; */
+    margin-top: 150px;
+    position: relative;
+    z-index: 2;
+    width: 200px;
+  }
+  .person{
+    z-index: 9999999;
+    position: relative;
+    /* width: 100%; */
+    margin-left: -10px;
+  }
+  .smallIntro{
+    white-space: unset;
+    overflow: unset;
+  }
+  .smallIntroTwo{
+    white-space: unset;
+    overflow: unset;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .homeText{
+    width: 100px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .home{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .homeText{
+    margin-left: 0px;
+    margin-top: 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+  .homeText h1{
+    font-size: 50px;
+  }
+  .homeText h6{
+    font-size: 16px;
+  }
+  .smallIntro{
+    /* width: 250px; */
+    white-space: unset;
+    overflow: unset;
+  }
+  .smallIntroTwo{
+    white-space: unset;
+    overflow: unset;
+    /* width: 210px; */
+  }
+  .portrait {
+    margin-top: 40px;
+    width: 350px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* .portrait{
+      margin-left: 80px
+    } */
+  }
+}
