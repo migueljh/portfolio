@@ -1,0 +1,345 @@
+.flexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.secondFlexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.textTitle {
+  color: rgb(146, 145, 145);
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  margin-top: 80px;
+}
+
+.textSubTitle {
+  color: rgb(146, 145, 145);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.formContact {
+  width: 50%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContact input {
+  height: 100%;
+  width: 500px;
+  padding-top: 20px;
+  border: none;
+  background-color: #333;
+  outline: none;
+  font-size: 18px;
+  /* color: rgb(146, 145, 145); */
+  font-weight: 800;
+  padding-left: 30px;
+}
+
+.labelName {
+  font-size: 18px;
+  color: rgb(146, 145, 145);
+  font-weight: 800;
+}
+
+.formContact label {
+  position: absolute;
+  bottom: 0px;
+  height: 100%;
+  width: 500px;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(146, 145, 145);
+  align-items: center;
+  justify-content: center;
+}
+
+.formContact ~ label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid rgb(146, 145, 145);
+  transform: translateX(-100%);
+  transition: transform all 0.3s ease;
+}
+
+.contentName {
+  position: absolute;
+  bottom: 4px;
+  left: 30px;
+  transition: all 0.3s ease;
+}
+
+.formContact input:focus + .labelName .contentName,
+.formContact input:valid + .labelName .contentName {
+  transform: translateY(-120%);
+  font-size: 18px;
+  color: rgb(146, 145, 145);
+  font-weight: 800;
+}
+
+.formContact input:focus + .labelName::after,
+.formContact input:valid + .labelName::after {
+  transform: translateX(0%);
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#iconInput {
+  position: absolute;
+  left: 94px;
+  font-size: 18px;
+  color: rgb(146, 145, 145);
+  font-weight: 800;
+  margin-top: -2px;
+}
+
+.containerIcon {
+  display: flex;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btnContinue,
+.btnSubmit {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  border: 4px solid;
+  color: rgb(146, 145, 145);
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.btnSubmit {
+  width: 250px;
+}
+
+.btnContinue::before,
+.btnContinue::after,
+.btnSubmit::before,
+.btnSubmit::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background-color: #333;
+  transform: skewX(50deg);
+  transition: 0.5s linear;
+}
+
+.btnContinue::before,
+.btnSubmit::before {
+  top: -4px;
+  left: 10%;
+}
+
+.btnContinue::after,
+.btnSubmit::after {
+  bottom: -4px;
+  right: 10%;
+}
+
+.btnContinue:hover::before,
+.btnSubmit:hover::before {
+  left: 80%;
+}
+
+.btnContinue:hover::after,
+.btnSubmit:hover::after {
+  right: 80%;
+}
+
+.alert {
+  background-color: #fff;
+  padding: 0;
+  min-width: 80px;
+  position: fixed;
+  height: 0;
+  right: 40%;
+  top: 30%;
+  border-radius: 4px;
+  border-left: 8px solid rgb(146, 145, 145);
+  overflow: hidden;
+  z-index: 999;
+  width: 400px;
+}
+
+.alert .msg {
+  font-size: 18px;
+  padding: 0px 20px;
+  margin-right: 10px;
+  margin-top: 15px;
+  color: rgb(146, 145, 145);
+  font-weight: 900;
+}
+
+.alert.show {
+  animation: show_slide 1s ease forwards;
+}
+
+.alert.hide {
+  display: none;
+}
+
+#alertalert{
+  height: 150px;
+}
+
+.btnAlert {
+  display: flex;
+  margin-top: 30px;
+  width: 270px;
+  height: 50px;
+  background-color: rgb(146, 145, 145);
+  border: 4px solid;
+  color: rgb(226, 224, 224);
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* animations */
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes show_slide {
+  0% {
+    transform: translateY(100%);
+  }
+  0% {
+    transform: translateY(-10%);
+  }
+  0% {
+    transform: translateY(0%);
+  }
+  0% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes alertShow {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 10%;
+    left: 20%;
+  }
+}
+
+@keyframes alertHide {
+  0% {
+    top: 10%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+/* responsive */
+
+@media only screen and (max-width: 800px) {
+  #iconInput{
+    left: 2px
+  }
+  .contentName{
+    left: 125px;
+  }
+  .formContact input {
+    margin-left: 10px !important;
+    width: 600px !important; 
+  }
+
+  .formContact{
+    width: 80%
+  }
+
+  .secondFlexContainer{
+    height: 200px;
+  }
+
+  .flexRow{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #alertalert{
+    height: 250px;
+    margin-left: 140px;
+    width: 350px;
+    text-align: center;
+  }
+
+  .alert{
+    padding: 0;
+    height: 0;
+    left: -140px;
+  }
+
+  .btnAlert{
+    width: 300px !important;
+  }
+
+  @keyframes alertShow {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 10%;
+    }
+  }
+
+}

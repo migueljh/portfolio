@@ -1,0 +1,140 @@
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondFlexContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.textTitle {
+  color: rgb(146, 145, 145);
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  margin-top: 80px;
+}
+
+.textSubTitle {
+  color: rgb(146, 145, 145);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.textTitleProjects {
+  color: rgb(146, 145, 145);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.projects {
+  justify-content: "center";
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  height: 2px;
+  width: 200px;
+  background-color: rgb(146, 145, 145);
+  margin-top: -10px;
+}
+
+.textSubTitleProjects {
+  font-size: 20px;
+  color: rgb(146, 145, 145);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.imgAccenture {
+  width: 120px;
+  height: 35px;
+  margin-left: 2px;
+}
+
+.imgAccentureLight {
+  width: 120px;
+  height: 35px;
+  margin-left: 2px;
+}
+
+.textWorkDescription {
+  font-size: 20px;
+  color: rgb(146, 145, 145);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.imgIBM {
+  width: 70px;
+  height: 22px;
+  margin-left: 5px;
+}
+
+.textResume {
+  font-size: 20px;
+  color: rgb(146, 145, 145);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.textResumeDownload {
+  font-size: 20px;
+  color: rgb(146, 145, 145);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 800px) {
+  .flexContainer{
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .secondFlexContainer{
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .textResume{
+    width: 50%;
+  }
+
+  #accenture{
+    margin-top: 60px;
+  }
+
+  #accenture_position{
+    width: 90% !important;
+  }
+  #ibm_position{
+    width: 90% !important;
+  }
+  .imgIBM{
+    margin-top: 10px;
+    margin-bottom: -5px
+  }
+  #ibm{
+    margin-top: 80px !important; 
+  }
+  .textResumeDownload{
+    border-bottom: transparent !important;
+  }
+}
