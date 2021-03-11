@@ -30,8 +30,8 @@ export const Context = React.createContext({
 function App() {
   const [screen, setScreen] = useState("");
   const [colorMenu, setColorMenu] = useState(false);
-	const [theme, setTheme] = useState(localStorage.getItem("theme") /* || "dark" */);
-	const [language, setLanguage] = useState(localStorage.getItem("language"));
+	const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+	const [language, setLanguage] = useState(localStorage.getItem("language") || "es");
   const [loading, setLoading] = useState(true); 
 
   const handleLoading = () => {
