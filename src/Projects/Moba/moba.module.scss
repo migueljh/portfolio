@@ -103,11 +103,12 @@
 
   #btnWebsite{
     font-size: 14px;
+    width: 160px !important;
   }
   #btnRepository{
     margin-right: 20px !important;
     font-size: 14px;
-    width: 180px !important;
+    width: 160px !important;
   }
 
   .textTitle{
@@ -125,5 +126,27 @@
   .secondImgShared{
     width: 100%;
     height: 250px;
+  }
+
+  .moba2{
+    width: 100%;
+    height: 350px;
+  }
+  .moba3{
+    width: 100%;
+    height: 220px;
+  }
+  .moba4{
+    width: 100%;
+    height: 420px;
+  }
+
+  .moba8{
+    width: 100%;
+    height: 500px;
+  }
+  .moba9{
+    width: 100%;
+    height: 540px;
   }
 }

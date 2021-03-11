@@ -52,7 +52,8 @@ const ButtonRepository = styled.button`
     position: absolute;
     width: 14px;
     height: 4px;
-    background-color: ${({ theme }) => (theme === "dark" ? "#333" : "#fff")};#333;
+    background-color: ${({ theme }) =>
+      theme === "dark" ? "#333" : "#fff"};#333;
     transform: skewX(50deg);
     transition: 0.5s linear;
   }
@@ -102,7 +103,8 @@ const ButtonWebsite = styled.button`
     position: absolute;
     width: 14px;
     height: 4px;
-    background-color: ${({ theme }) => (theme === "dark" ? "#333" : "#fff")};#333;
+    background-color: ${({ theme }) =>
+      theme === "dark" ? "#333" : "#fff"};#333;
     transform: skewX(50deg);
     transition: 0.5s linear;
   }
@@ -168,47 +170,59 @@ const Henryfy = () => {
               theme === "dark" ? "5px solid white" : "5px solid #521886",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" ? en.title : es.title}
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
+            ? en.title
+            : es.title}
         </p>
       </div>
       <div className={styles.flexContainer} style={{ flexDirection: "row" }}>
         <a href="https://www.youtube.com/watch?v=fs4kmvSOWmg&ab_channel=MOBA-">
-        <ButtonWebsite theme={theme} id={styles.btnWebsite}>
-          <p
-            style={{
-              color: theme === "dark" ? "white" : "#521886",
-              marginTop: "18px",
-            }}
-          >
-            { !language ? null : language.value === "en" || language === "en" ? en.demo : es.demo}
-          </p>
-          <i
-            className="fab fa-youtube"
-            style={{
-              paddingLeft: "20px",
-              color: theme === "dark" ? "white" : "#521886",
-            }}
-          ></i>
-        </ButtonWebsite>
+          <ButtonWebsite theme={theme} id={styles.btnWebsite}>
+            <p
+              style={{
+                color: theme === "dark" ? "white" : "#521886",
+                marginTop: "18px",
+              }}
+            >
+              {!language
+                ? null
+                : language.value === "en" || language === "en"
+                ? en.demo
+                : es.demo}
+            </p>
+            <i
+              className="fab fa-youtube"
+              style={{
+                paddingLeft: "20px",
+                color: theme === "dark" ? "white" : "#521886",
+              }}
+            ></i>
+          </ButtonWebsite>
         </a>
-<a href="https://github.com/jceschin/moba">
-        <ButtonRepository theme={theme} id={styles.btnRepository}>
-          <p
-            style={{
-              color: theme === "dark" ? "white" : "#521886",
-              marginTop: "18px",
-            }}
-          >
-            { !language ? null : language.value === "en" || language === "en" ? en.repository : es.repository}
-          </p>
-          <i
-            className="fab fa-github"
-            style={{
-              paddingLeft: "10px",
-              color: theme === "dark" ? "white" : "#521886",
-            }}
-          ></i>
-        </ButtonRepository>
+        <a href="https://github.com/jceschin/moba">
+          <ButtonRepository theme={theme} id={styles.btnRepository}>
+            <p
+              style={{
+                color: theme === "dark" ? "white" : "#521886",
+                marginTop: "18px",
+              }}
+            >
+              {!language
+                ? null
+                : language.value === "en" || language === "en"
+                ? en.repository
+                : es.repository}
+            </p>
+            <i
+              className="fab fa-github"
+              style={{
+                paddingLeft: "10px",
+                color: theme === "dark" ? "white" : "#521886",
+              }}
+            ></i>
+          </ButtonRepository>
         </a>
       </div>
       <div className={styles.flexContainer}>
@@ -226,7 +240,11 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" ? en.friendly_app : es.friendly_app}
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
+            ? en.friendly_app
+            : es.friendly_app}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -237,14 +255,24 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.friendly_app_description
             : es.friendly_app_description}
 
           <p style={{ color: theme === "dark" ? "white" : "#521886" }}>
-            { !language ? null : language.value === "en" || language === "en" ? en.languages : es.languages}
+            {!language
+              ? null
+              : language.value === "en" || language === "en"
+              ? en.languages
+              : es.languages}
           </p>
-          { !language ? null : language.value === "en" || language === "en" ? en.designed : es.designed}
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
+            ? en.designed
+            : es.designed}
           <p style={{ color: theme === "dark" ? "white" : "#521886" }}>Figma</p>
         </p>
       </div>
@@ -252,7 +280,11 @@ const Henryfy = () => {
         className={styles.flexContainer}
         style={{ marginTop: "80px", marginBottom: "80px" }}
       >
-        {theme === "dark" ? <img src={moba2Dark} className={styles.firstImgShared}/> : <img src={moba2} className={styles.firstImgShared}/>}
+        {theme === "dark" ? (
+          <img src={moba2Dark} className={styles.moba2} />
+        ) : (
+          <img src={moba2} className={styles.moba2} />
+        )}
       </div>
       <div className={styles.flexContainer}>
         <p
@@ -263,7 +295,11 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" ? en.title_register : es.title_register}
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
+            ? en.title_register
+            : es.title_register}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -274,7 +310,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.register_description
             : es.register_description}
         </p>
@@ -286,7 +324,11 @@ const Henryfy = () => {
           marginBottom: "80px",
         }}
       >
-        {theme === "dark" ? <img src={moba3Dark} className={styles.firstImgShared}/> : <img src={moba3} className={styles.secondImgShared}/>}
+        {theme === "dark" ? (
+          <img src={moba3Dark} className={styles.moba3} />
+        ) : (
+          <img src={moba3} className={styles.moba3} />
+        )}
       </div>
       <div
         className={styles.flexContainer}
@@ -295,7 +337,11 @@ const Henryfy = () => {
           marginBottom: "80px",
         }}
       >
-        {theme === "dark" ? <img src={moba4Dark} className={styles.firstImgShared}/> : <img src={moba4} className={styles.firstImgShared}/>}
+        {theme === "dark" ? (
+          <img src={moba4Dark} className={styles.moba4} />
+        ) : (
+          <img src={moba4} className={styles.moba4} />
+        )}
       </div>
       <div className={styles.flexContainer}>
         <p
@@ -306,7 +352,11 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" ? en.add_money_title : es.add_money_title}
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
+            ? en.add_money_title
+            : es.add_money_title}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -317,7 +367,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.add_money_description
             : es.add_money_description}
         </p>
@@ -346,7 +398,11 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" ? en.statistics : es.statistics}
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
+            ? en.statistics
+            : es.statistics}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -357,7 +413,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.statistics_description
             : es.statistics_description}
         </p>
@@ -383,7 +441,11 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" ? en.virtual_card : es.virtual_card}
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
+            ? en.virtual_card
+            : es.virtual_card}
         </p>
       </div>
       <div className={styles.flexContainer}>
@@ -394,7 +456,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.virtual_card_description
             : es.virtual_card_description}
         </p>
@@ -420,7 +484,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.transactions_title
             : es.transactions_title}
         </p>
@@ -433,7 +499,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.transactions_description
             : es.transactions_description}
         </p>
@@ -441,13 +509,13 @@ const Henryfy = () => {
       <div className={styles.flexContainer}>
         {theme === "dark" ? (
           <img
-          className={styles.firstImgShared}
+            className={styles.moba8}
             src={moba8Dark}
             style={{ marginTop: "80px", marginBottom: "80px" }}
           />
         ) : (
           <img
-          className={styles.firstImgShared}
+            className={styles.moba8}
             src={moba8}
             style={{ marginTop: "80px", marginBottom: "80px" }}
           />
@@ -462,7 +530,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.transfer_unregister
             : es.transfer_unregister}
         </p>
@@ -475,7 +545,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.transfer_unregister_description
             : es.transfer_unregister_description}
         </p>
@@ -483,13 +555,13 @@ const Henryfy = () => {
       <div className={styles.flexContainer}>
         {theme === "dark" ? (
           <img
-          className={styles.firstImgShared}
+            className={styles.moba9}
             src={moba9Dark}
             style={{ marginTop: "40px", marginBottom: "80px" }}
           />
         ) : (
           <img
-          className={styles.firstImgShared}
+            className={styles.moba9}
             src={moba9}
             style={{ marginTop: "40px", marginBottom: "80px" }}
           />
@@ -503,7 +575,9 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" 
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
             ? en.transfer_unregister_description_2
             : es.transfer_unregister_description_2}
         </p>{" "}
@@ -511,13 +585,13 @@ const Henryfy = () => {
       <div className={styles.flexContainer}>
         {theme === "dark" ? (
           <img
-          className={styles.firstImgShared}
+            className={styles.moba2}
             src={moba10Dark}
             style={{ marginTop: "80px", marginBottom: "80px" }}
           />
         ) : (
           <img
-          className={styles.firstImgShared}
+            className={styles.moba2}
             src={moba10}
             style={{ marginTop: "80px", marginBottom: "80px" }}
           />

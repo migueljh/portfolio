@@ -5,7 +5,8 @@ import ibm from "../img/Resume/Vector.png";
 import accentureLight from "../img/Resume/accenture-logo-1.png";
 import ibmLight from "../img/Resume/ibm-logo.png";
 import { Context } from "../App";
-import resume from "../img/Resume/Miguel_Hernandez_FullStack.pdf";
+import resume_es from "../img/Resume/Miguel_Hernandez_ES.pdf";
+import resume_en from "../img/Resume/Miguel_Hernandez_EN.pdf";
 import { motion } from "framer-motion";
 import { pageTransition, pageVariants } from "../pages";
 import {en, es} from "./translate"
@@ -63,7 +64,7 @@ const WorkExperience = () => {
           >
             { !language ? null : language.value === "en" || language === "en" ? en.invitation : es.invitation}
           </p>
-          <a href={resume}>
+          <a href={!language ? null : language.value === "en" || language === "en" ? resume_en : resume_es}>
             <div className={styles.flexContainer}>
               <i
                 class="fas fa-save fa-2x"

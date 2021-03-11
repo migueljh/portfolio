@@ -94,10 +94,16 @@ const Menu = () => {
         className={styles.header}
         style={{ backgroundColor: theme === "light" ? "#fff" : "#333" }}
       >
-        <div className={styles.logo}>
-          {theme === "light" ? <img src={logoLight} className={styles.logoNav}/> : <img src={logoDark} className={styles.logoNav}/>}
-        </div>
-
+        <a href="/">
+          {" "}
+          <div className={styles.logo}>
+            {theme === "light" ? (
+              <img src={logoLight} className={styles.logoNav} />
+            ) : (
+              <img src={logoDark} className={styles.logoNav} />
+            )}
+          </div>
+        </a>
         <div className={styles.styledMenuContainer}>
           <StyledMenu menu={menu} onClick={openMenu}>
             <div
@@ -145,7 +151,11 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          { !language ? null : language.value === "en" || language === "en" ? en.home : es.home}
+                          {!language
+                            ? null
+                            : language.value === "en" || language === "en"
+                            ? en.home
+                            : es.home}
                         </p>
                         <div
                           className={styles.lineOne}
@@ -154,8 +164,10 @@ const Menu = () => {
                         <div
                           className={styles.lineTwo}
                           style={{
-                            border: theme === "light" ? " 2px solid #333" : null,
-                            backgroundColor: theme === "dark" ? "#2e2e2e" : null,
+                            border:
+                              theme === "light" ? " 2px solid #333" : null,
+                            backgroundColor:
+                              theme === "dark" ? "#2e2e2e" : null,
                           }}
                         ></div>
                       </Link>
@@ -168,7 +180,11 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          { !language ? null : language.value === "en" || language === "en" ? en.projects : es.projects}
+                          {!language
+                            ? null
+                            : language.value === "en" || language === "en"
+                            ? en.projects
+                            : es.projects}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div
@@ -180,7 +196,8 @@ const Menu = () => {
                               theme === "light" ? " 2px solid #333" : null,
                             borderRight:
                               theme === "light" ? " 2px solid #333" : null,
-                            backgroundColor: theme === "dark" ? "#2e2e2e" : null,
+                            backgroundColor:
+                              theme === "dark" ? "#2e2e2e" : null,
                           }}
                         ></div>
                       </Link>
@@ -193,7 +210,11 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          { !language ? null : language.value === "en" || language === "en" ? en.resume : es.resume}
+                          {!language
+                            ? null
+                            : language.value === "en" || language === "en"
+                            ? en.resume
+                            : es.resume}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div
@@ -205,7 +226,8 @@ const Menu = () => {
                               theme === "light" ? " 2px solid #333" : null,
                             borderRight:
                               theme === "light" ? " 2px solid #333" : null,
-                            backgroundColor: theme === "dark" ? "#2e2e2e" : null,
+                            backgroundColor:
+                              theme === "dark" ? "#2e2e2e" : null,
                           }}
                         ></div>
                       </Link>
@@ -219,7 +241,11 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          { !language ? null : language.value === "en" || language === "en" ? en.contact : es.contact}
+                          {!language
+                            ? null
+                            : language.value === "en" || language === "en"
+                            ? en.contact
+                            : es.contact}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div
@@ -231,7 +257,8 @@ const Menu = () => {
                               theme === "light" ? " 2px solid #333" : null,
                             borderRight:
                               theme === "light" ? " 2px solid #333" : null,
-                            backgroundColor: theme === "dark" ? "#2e2e2e" : null,
+                            backgroundColor:
+                              theme === "dark" ? "#2e2e2e" : null,
                           }}
                         ></div>
                       </Link>
