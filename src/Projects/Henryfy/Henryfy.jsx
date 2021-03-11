@@ -235,7 +235,7 @@ const Henryfy = () => {
               marginTop: "20px"
             }}
           >
-            { /* language.value === "en" ||  */language === "en"  
+            { !language ? null : language.value === "en" || language === "en" 
               ? en.first_description
               : es.first_description}
             <br />
@@ -268,7 +268,7 @@ const Henryfy = () => {
                   color: theme === "dark" ? "rgb(201, 201, 201)" : "#333",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.registration_title
                   : es.registration_title}
               </p>
@@ -282,7 +282,7 @@ const Henryfy = () => {
                   border: "none"
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.registration_description
                   : es.registration_description}
               </p>
@@ -306,7 +306,7 @@ const Henryfy = () => {
                   color: theme === "dark" ? "rgb(201, 201, 201)" : "#333",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.guest_title
                   : es.guest_title}
               </p>
@@ -320,7 +320,7 @@ const Henryfy = () => {
                   width: "50%",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.guest_description
                   : es.guest_description}
             </p>
@@ -358,7 +358,7 @@ const Henryfy = () => {
                   width: "50%",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.checkout_description
                   : es.checkout_description}
             </p>
@@ -378,7 +378,7 @@ const Henryfy = () => {
                   color: theme === "dark" ? "rgb(201, 201, 201)" : "#333",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.categories_title
                   : es.categories_title}
               </p>
@@ -393,7 +393,7 @@ const Henryfy = () => {
                   marginTop: "20px"
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.categories_description
                   : es.categories_description}
             </p>
@@ -417,7 +417,7 @@ const Henryfy = () => {
                   color: theme === "dark" ? "rgb(201, 201, 201)" : "#333",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.product_details
                   : es.product_details}
               </p>
@@ -432,7 +432,7 @@ const Henryfy = () => {
                   border: "none"
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.product_details_description
                   : es.product_details_description}
             </p>
@@ -471,7 +471,7 @@ const Henryfy = () => {
                   color: theme === "dark" ? "rgb(201, 201, 201)" : "#333",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.edit_profile
                   : es.edit_profile}
               </p>
@@ -485,7 +485,7 @@ const Henryfy = () => {
                   width: "50%"
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.edit_profile_description
                   : es.edit_profile_description}
             </p>
@@ -505,7 +505,7 @@ const Henryfy = () => {
                   color: theme === "dark" ? "rgb(201, 201, 201)" : "#333",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.administrator
                   : es.administrator}
               </p>
@@ -520,7 +520,7 @@ const Henryfy = () => {
                   border: "none"
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.administrator_description
                   : es.administrator_description}
             </p>
@@ -549,7 +549,7 @@ const Henryfy = () => {
                   color: theme === "dark" ? "rgb(201, 201, 201)" : "#333",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.reviews_title
                   : es.reviews_title}
               </p>
@@ -564,7 +564,7 @@ const Henryfy = () => {
                   border: "none"
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  
+                { !language ? null : language.value === "en" || language === "en" 
                   ? en.reviews_description
                   : es.reviews_description}
             </p>

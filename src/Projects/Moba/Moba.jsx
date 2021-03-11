@@ -234,7 +234,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.friendly_app_description
             : es.friendly_app_description}
 
@@ -271,7 +271,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.register_description
             : es.register_description}
         </p>
@@ -314,7 +314,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.add_money_description
             : es.add_money_description}
         </p>
@@ -354,7 +354,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.statistics_description
             : es.statistics_description}
         </p>
@@ -391,7 +391,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.virtual_card_description
             : es.virtual_card_description}
         </p>
@@ -417,7 +417,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.transactions_title
             : es.transactions_title}
         </p>
@@ -430,7 +430,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.transactions_description
             : es.transactions_description}
         </p>
@@ -459,7 +459,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "#521886",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.transfer_unregister
             : es.transfer_unregister}
         </p>
@@ -472,7 +472,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.transfer_unregister_description
             : es.transfer_unregister_description}
         </p>
@@ -500,7 +500,7 @@ const Henryfy = () => {
             color: theme === "dark" ? "white" : "black",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  
+          { !language ? null : language.value === "en" || language === "en" 
             ? en.transfer_unregister_description_2
             : es.transfer_unregister_description_2}
         </p>{" "}

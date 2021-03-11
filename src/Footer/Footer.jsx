@@ -167,7 +167,7 @@ const Footer = () => {
               color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
             }}
           >
-            { /* language.value === "en" ||  */language === "en"  
+            { !language ? null : language.value === "en" || language === "en" 
               ? en.language
               : es.language}
           </p>
@@ -179,7 +179,7 @@ const Footer = () => {
             icon="language"
             options={languages}
             text={
-               /* language.value === "en" ||  */language === "en"  
+               !language ? null : language.value === "en" || language === "en" 
                 ? "English"
                 : "Español"
             }
