@@ -75,7 +75,7 @@ const Footer = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 20,
-                    color: "rgb(170, 169, 169)",
+                    color: "#333",
                     fontWeight: "800",
                     paddingRight: 0,
                   }}
@@ -91,7 +91,7 @@ const Footer = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 20,
-                    color: "#333",
+                    color: "rgb(170, 169, 169)",
                     fontWeight: "800",
                     paddingRight: 0,
                   }}
@@ -106,11 +106,11 @@ const Footer = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
-                    color: "rgb(170, 169, 169)",
+                    color: "#333",
                     fontSize: 18,
                   }}
                 >
-                  <i className="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
                 </div>
               }
               uncheckedHandleIcon={
@@ -120,11 +120,11 @@ const Footer = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
-                    color: "#333",
+                    color: "rgb(170, 169, 169)",
                     fontSize: 18,
                   }}
                 >
-                  <i class="fas fa-sun"></i>
+                  <i className="fas fa-moon"></i>
                 </div>
               }
               className="react-switch"
