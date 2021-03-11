@@ -562,7 +562,7 @@ const Projects = () => {
                 <span>
                   <p className={styles.projectsRowTitle}>
                     Weather App{" "}
-                    <i
+                    <i 
                       class="fas fa-info-circle fa-0.5x"
                       id={styles.infoIcon}
                       onClick={() => {
