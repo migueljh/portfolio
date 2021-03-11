@@ -220,6 +220,7 @@ const Contact = () => {
         style={{
           display: screen === "menu" ? "none" : null,
           backgroundColor: theme === "light" ? "#fff" : "#333",
+          paddingBottom: "50px"
         }}
         onSubmit={onSubmit}
       >
@@ -245,7 +246,7 @@ const Contact = () => {
             { !language ? null : language.value === "en" || language === "en" ? en.subtitle : es.subtitle}
           </p>
         </div>
-        <div>
+        {/* <div>
           {page === "first" ? (
             <>
               <div className={styles.formContainer}>
@@ -427,7 +428,7 @@ const Contact = () => {
               ) : null}
             </>
           ) : null}
-        </div>
+        </div> */}
       </form>
     </motion.div>
   );
