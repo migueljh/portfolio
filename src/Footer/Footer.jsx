@@ -80,7 +80,7 @@ const Footer = () => {
                     paddingRight: 0,
                   }}
                 >
-                  { !language ? null : language.value || language === "en" === "en" ? en.dark : es.dark}
+                  { !language ? null : language.value === "en" || language === "en" ? en.dark : es.dark}
                 </div>
               }
               uncheckedIcon={
