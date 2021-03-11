@@ -60,10 +60,10 @@ const Footer = () => {
               checked={checked}
               onChange={handleSwitch}
               handleDiameter={28}
-              offColor="#333"
-              onColor="#fff"
-              offHandleColor="#333"
-              onHandleColor="#fff"
+              offColor="#fff"
+              onColor="#333"
+              offHandleColor="#fff"
+              onHandleColor="#333"
               height={30}
               width={120}
               borderRadius={6}
@@ -75,12 +75,12 @@ const Footer = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 20,
-                    color: "#333",
+                    color: "rgb(170, 169, 169)",
                     fontWeight: "800",
                     paddingRight: 0,
                   }}
                 >
-                  { !language ? null : language.value === "en" || language === "en" ? en.light : es.light}
+                  { !language ? null : language.value === "en" || language === "en" ? en.dark : es.dark}
                 </div>
               }
               uncheckedIcon={
@@ -91,29 +91,15 @@ const Footer = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 20,
-                    color: "rgb(170, 169, 169)",
+                    color: "#333",
                     fontWeight: "800",
                     paddingRight: 0,
                   }}
                 >
-                  {!language ? null : language.value === "en" || language === "en" ? en.dark : es.dark}
+                  {!language ? null : language.value === "en" || language === "en" ? en.light : es.light}
                 </div>
               }
               checkedHandleIcon={
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                    color: "#333",
-                    fontSize: 18,
-                  }}
-                >
-                  <i class="fas fa-sun"></i>
-                </div>
-              }
-              uncheckedHandleIcon={
                 <div
                   style={{
                     display: "flex",
@@ -125,6 +111,20 @@ const Footer = () => {
                   }}
                 >
                   <i className="fas fa-moon"></i>
+                </div>
+              }
+              uncheckedHandleIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    color: "#333",
+                    fontSize: 18,
+                  }}
+                >
+                  <i class="fas fa-sun"></i>
                 </div>
               }
               className="react-switch"
