@@ -60,10 +60,10 @@ const Footer = () => {
               checked={checked}
               onChange={handleSwitch}
               handleDiameter={28}
-              offColor="#fff"
-              onColor="#333"
-              offHandleColor="#fff"
-              onHandleColor="#333"
+              offColor="#333"
+              onColor="#fff"
+              offHandleColor="#333"
+              onHandleColor="#fff"
               height={30}
               width={120}
               borderRadius={6}
@@ -80,7 +80,7 @@ const Footer = () => {
                     paddingRight: 0,
                   }}
                 >
-                  { !language ? null : language.value === "en" || language === "en" ? en.dark : es.dark}
+                  { !language ? null : language.value === "en" || language === "en" ? en.light : es.light}
                 </div>
               }
               uncheckedIcon={
@@ -96,7 +96,7 @@ const Footer = () => {
                     paddingRight: 0,
                   }}
                 >
-                  {!language ? null : language.value === "en" || language === "en" ? en.light : es.light}
+                  {!language ? null : language.value === "en" || language === "en" ? en.dark : es.dark}
                 </div>
               }
               checkedHandleIcon={
