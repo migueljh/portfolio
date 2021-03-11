@@ -136,7 +136,7 @@ const Projects = () => {
                   color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
                 }}
               >
-                Show All
+               { !language ? null : language.value === "en" || language === "en" ? en.show_all : es.show_all}
               </p>
               <div
                 className={styles.lineOne}
@@ -455,7 +455,7 @@ const Projects = () => {
                 <span>
                   <p className={styles.projectsRowTitle}>
                     Henryfy{" "}
-                    <i
+                   {/*  <i
                       class="fas fa-info-circle fa-0.5x"
                       id={styles.infoIcon}
                       onClick={() => {
@@ -463,7 +463,7 @@ const Projects = () => {
                         setAnimate(true);
                         setTextAlert("ecommerce");
                       }}
-                    ></i>
+                    ></i> */}
                   </p>
                 </span>
                 <Link to="/projects/henryfy">

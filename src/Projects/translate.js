@@ -9,7 +9,8 @@ export const en = {
     ecommerce_alert: "Henryfy currently in deployment",
     moba_alert: "Moba currently in deployment",
     weather_alert: "Weather is under construction",
-    movies_alert: "Movies Finder is under construction"
+    movies_alert: "Movies Finder is under construction",
+    show_all: "Show All"
 }
 
 export const es = {
@@ -24,4 +25,5 @@ export const es = {
     moba_alert: "MOBA se está deployando",
     weather_alert: "Weather App está en desarrollo",
     movies_alert: "Movies Finder está en desarrollo", 
+    show_all: "Todos"
 } 

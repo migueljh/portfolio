@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import styles from "./home.module.scss";
 import { Context } from "../App";
-import drawn_portrait from "../img/Home/migue copia 2 boca nueva1 sin fondo.png";
+import drawn_portrait from "../img/Home/logo.png";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import {en, es} from "./translate"
 const Home = () => {
