@@ -172,6 +172,7 @@ const Henryfy = () => {
         </p>
       </div>
       <div className={styles.flexContainer} style={{ flexDirection: "row" }}>
+        <a href="https://www.youtube.com/watch?v=fs4kmvSOWmg&ab_channel=MOBA-">
         <ButtonWebsite theme={theme} id={styles.btnWebsite}>
           <p
             style={{
@@ -189,7 +190,8 @@ const Henryfy = () => {
             }}
           ></i>
         </ButtonWebsite>
-
+        </a>
+<a href="https://github.com/jceschin/moba">
         <ButtonRepository theme={theme} id={styles.btnRepository}>
           <p
             style={{
@@ -207,6 +209,7 @@ const Henryfy = () => {
             }}
           ></i>
         </ButtonRepository>
+        </a>
       </div>
       <div className={styles.flexContainer}>
         {theme === "dark" ? (

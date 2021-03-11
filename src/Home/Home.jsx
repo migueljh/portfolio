@@ -1,7 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import styles from "./home.module.scss";
 import { Context } from "../App";
-import drawn_portrait from "../img/Home/logo.png";
+/* import drawn_portrait from "../img/Home/migue copia 2 boca nueva1 sin fondo.png"; */
+import drawn_portrait from "./drawn_portrait.jpg"
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import {en, es} from "./translate"
 const Home = () => {
@@ -33,10 +34,10 @@ const Home = () => {
             {/* <div style={{ width: "500px" }}> */}
               <p className={styles.smallIntro}>
                 {" "}
-                { !language ? null : language.value === "en" || language === "en" ? en.title : es.title}
+                { !language ? null : language.value === "en" || language === "en" ? <p>I'm a Web/Mobile Developer, <a href="/projects" style={{color: theme === "dark" ? "white" : "#333", textDecoration: "underline"}}>here</a> you can watch my projects</p> : <p>Soy un Programador Web/Mobile, <a href="/projects" style={{color: theme === "dark" ? "white" : "#333", textDecoration: "underline"}}>aquí</a> puedes ver mis projectos</p>}
               </p>
               <p className={styles.smallIntroTwo}>
-              { !language ? null : language.value === "en" || language === "en" ? <p>here you can contact me, and here you can download my resume</p>:<p>aquí puedes contactarme y aquí puedes descargar mi CV</p>}
+              { !language ? null : language.value === "en" || language === "en" ? <p><a href="/contact" style={{color: theme === "dark" ? "white" : "#333", textDecoration: "underline"}}>here</a> you can contact me, and <a href="/resume" style={{color: theme === "dark" ? "white" : "#333", textDecoration: "underline"}}>here</a> you can download my resume</p>:<p><a href="/contact" style={{color: theme === "dark" ? "white" : "#333", textDecoration: "underline"}}>aquí</a> puedes contactarme y <a href="/resume" style={{color: theme === "dark" ? "white" : "#333", textDecoration: "underline"}}>aquí</a> puedes descargar mi CV</p>}
               </p>
             {/* </div> */}
             

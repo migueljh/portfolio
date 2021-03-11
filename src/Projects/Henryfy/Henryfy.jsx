@@ -173,6 +173,7 @@ const Henryfy = () => {
           }}
         >
           <div className={styles.btnContainer}>
+            <a href="https://ecommerce-tickets.vercel.app/">
             <ButtonWebsite theme={theme} id={styles.btnWebsite}>
               <p
                 style={{
@@ -190,8 +191,10 @@ const Henryfy = () => {
                 }}
               ></i>
             </ButtonWebsite>
+            </a>
           </div>
           <div className={styles.btnContainer}>
+            <a href="https://github.com/migueljh/ecommerce-ft07-g06">
             <ButtonRepository theme={theme} id={styles.btnRepository}>
               <p
                 style={{
@@ -209,6 +212,7 @@ const Henryfy = () => {
                 }}
               ></i>
             </ButtonRepository>
+            </a>
           </div>
         </div>
         <div className={styles.flexContainer}>

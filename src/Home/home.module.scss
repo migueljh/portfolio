@@ -23,7 +23,8 @@
   height: 450px;
   padding-top: 20px;
   margin-bottom: 40px;
-  border-radius: 4000px;
+  border-radius: 200px;
+  margin-left: 30px;
 }
 
 .homeText {
@@ -124,6 +125,7 @@
     overflow: unset;
   }
 }
+
 
 @media only screen and (max-width: 1100px) {
   .homeText{

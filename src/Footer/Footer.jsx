@@ -53,7 +53,11 @@ const Footer = () => {
               color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
             }}
           >
-            {!language ? null : language.value === "en" || language === "en" ? en.theme : es.theme}
+            {!language
+              ? null
+              : language.value === "en" || language === "en"
+              ? en.theme
+              : es.theme}
           </p>
           <p style={{ marginLeft: "20px" }}>
             <Switch
@@ -80,7 +84,11 @@ const Footer = () => {
                     paddingRight: 0,
                   }}
                 >
-                  { !language ? null : language.value === "en" || language === "en" ? en.light : es.light}
+                  {!language
+                    ? null
+                    : language.value === "en" || language === "en"
+                    ? en.light
+                    : es.light}
                 </div>
               }
               uncheckedIcon={
@@ -96,7 +104,11 @@ const Footer = () => {
                     paddingRight: 0,
                   }}
                 >
-                  {!language ? null : language.value === "en" || language === "en" ? en.dark : es.dark}
+                  {!language
+                    ? null
+                    : language.value === "en" || language === "en"
+                    ? en.dark
+                    : es.dark}
                 </div>
               }
               checkedHandleIcon={
@@ -140,23 +152,31 @@ const Footer = () => {
               marginTop: "0px",
             }}
           >
-            { !language ? null : language.value === "en" || language === "en" ? en.talk : es.talk}
+            {!language
+              ? null
+              : language.value === "en" || language === "en"
+              ? en.talk
+              : es.talk}
           </p>
 
           <div className={styles.iconsRow}>
-            <i
-              class="fab fa-github-square fa-2x"
-              style={{
-                color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
-              }}
-            ></i>
-            <i 
-              class="fab fa-linkedin fa-2x"
-              style={{
-                paddingLeft: "15px",
-                color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
-              }}
-            ></i>
+            <a href="https://github.com/migueljh/">
+              <i
+                class="fab fa-github-square fa-2x"
+                style={{
+                  color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
+                }}
+              ></i>
+            </a>
+            <a href="https://www.linkedin.com/in/miguel-jose-hernandez/">
+              <i
+                class="fab fa-linkedin fa-2x"
+                style={{
+                  paddingLeft: "15px",
+                  color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
+                }}
+              ></i>
+            </a>
           </div>
         </div>
 
@@ -167,7 +187,9 @@ const Footer = () => {
               color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
             }}
           >
-            { !language ? null : language.value === "en" || language === "en" 
+            {!language
+              ? null
+              : language.value === "en" || language === "en"
               ? en.language
               : es.language}
           </p>
@@ -179,7 +201,9 @@ const Footer = () => {
             icon="language"
             options={languages}
             text={
-               !language ? null : language.value === "en" || language === "en" 
+              !language
+                ? null
+                : language.value === "en" || language === "en"
                 ? "English"
                 : "Español"
             }
@@ -203,7 +227,11 @@ const Footer = () => {
             marginBottom: "40px",
           }}
         >
-          { !language ? null : language.value === "en" || language === "en" ? en.credits : es.credits}
+          {!language
+            ? null
+            : language.value === "en" || language === "en"
+            ? en.credits
+            : es.credits}
         </p>
       </div>
     </div>
