@@ -95,7 +95,7 @@ const Menu = () => {
         style={{ backgroundColor: theme === "light" ? "#fff" : "#333" }}
       >
         <div className={styles.logo}>
-          {theme === "dark" ? <img src={logoDark} className={styles.logoNav}/> : <img src={logoLight} className={styles.logoNav}/>}
+          {theme === "light" ? <img src={logoLight} className={styles.logoNav}/> : <img src={logoDark} className={styles.logoNav}/>}
         </div>
 
         <div className={styles.styledMenuContainer}>
@@ -145,7 +145,7 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          { /* language.value === "en" ||  */language === "en"  ? en.home : es.home}
+                          { !language ? null : language.value === "en" || language === "en" ? en.home : es.home}
                         </p>
                         <div
                           className={styles.lineOne}
@@ -168,7 +168,7 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          { /* language.value === "en" ||  */language === "en"  ? en.projects : es.projects}
+                          { !language ? null : language.value === "en" || language === "en" ? en.projects : es.projects}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div
@@ -193,7 +193,7 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          { /* language.value === "en" ||  */language === "en"  ? en.resume : es.resume}
+                          { !language ? null : language.value === "en" || language === "en" ? en.resume : es.resume}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div
@@ -219,7 +219,7 @@ const Menu = () => {
                           className={styles.menuText}
                           style={{ marginTop: "15px" }}
                         >
-                          { /* language.value === "en" ||  */language === "en"  ? en.contact : es.contact}
+                          { !language ? null : language.value === "en" || language === "en" ? en.contact : es.contact}
                         </p>
                         <div className={styles.lineOne}></div>
                         <div

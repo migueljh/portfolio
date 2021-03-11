@@ -53,7 +53,7 @@ const Footer = () => {
               color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
             }}
           >
-            {language === "en" /* || language.value === "en" */  ? en.theme : es.theme}
+            {!language ? null : language.value === "en" || language === "en" ? en.theme : es.theme}
           </p>
           <p style={{ marginLeft: "20px" }}>
             <Switch
@@ -96,7 +96,7 @@ const Footer = () => {
                     paddingRight: 0,
                   }}
                 >
-                  {/* language.value === "en" ||  */language === "en"  ? en.light : es.light}
+                  {!language ? null : language.value === "en" || language === "en" ? en.light : es.light}
                 </div>
               }
               checkedHandleIcon={
@@ -140,7 +140,7 @@ const Footer = () => {
               marginTop: "0px",
             }}
           >
-            { /* language.value === "en" ||  */language === "en"  ? en.talk : es.talk}
+            { !language ? null : language.value === "en" || language === "en" ? en.talk : es.talk}
           </p>
 
           <div className={styles.iconsRow}>
@@ -203,7 +203,7 @@ const Footer = () => {
             marginBottom: "40px",
           }}
         >
-          { /* language.value === "en" ||  */language === "en"  ? en.credits : es.credits}
+          { !language ? null : language.value === "en" || language === "en" ? en.credits : es.credits}
         </p>
       </div>
     </div>

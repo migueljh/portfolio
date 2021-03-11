@@ -163,7 +163,7 @@ const Henryfy = () => {
               width: "35%",
             }}
           >
-            { /* language.value === "en" ||  */language === "en"  ? en.title : es.title}
+            { !language ? null : language.value === "en" || language === "en" ? en.title : es.title}
           </p>
         </div>
         <div
@@ -180,7 +180,7 @@ const Henryfy = () => {
                   marginTop: "18px",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  ? en.website : es.website}
+                { !language ? null : language.value === "en" || language === "en" ? en.website : es.website}
               </p>
               <i
                 className="fas fa-globe"
@@ -199,7 +199,7 @@ const Henryfy = () => {
                   marginTop: "18px",
                 }}
               >
-                { /* language.value === "en" ||  */language === "en"  ? en.repository : es.repository}
+                { !language ? null : language.value === "en" || language === "en" ? en.repository : es.repository}
               </p>
               <i
                 className="fab fa-github"
@@ -222,7 +222,7 @@ const Henryfy = () => {
               color: theme === "dark" ? "rgb(201, 201, 201)" : "#333",
             }}
           >
-            { /* language.value === "en" ||  */language === "en"  ? en.first_title : es.first_title}
+            { !language ? null : language.value === "en" || language === "en" ? en.first_title : es.first_title}
           </p>
         </div>
         <div className={styles.flexContainer} style={{ textAlign: "center" }}>
@@ -240,7 +240,7 @@ const Henryfy = () => {
               : es.first_description}
             <br />
             <br />
-            { /* language.value === "en" ||  */language === "en"  ? en.developed_with : es.developed_with}
+            { !language ? null : language.value === "en" || language === "en" ? en.developed_with : es.developed_with}
             <p
               style={{
                 fontWeight: "900",
