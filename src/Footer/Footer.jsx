@@ -53,7 +53,7 @@ const Footer = () => {
               color: theme === "light" ? "#333" : "rgb(170, 169, 169)",
             }}
           >
-            {language === "en" || language.value === "en"  ? en.theme : es.theme}
+            {language === "en" /* || language.value === "en" */  ? en.theme : es.theme}
           </p>
           <p style={{ marginLeft: "20px" }}>
             <Switch
