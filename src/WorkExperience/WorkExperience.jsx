@@ -123,7 +123,7 @@ const WorkExperience = () => {
           <div className={styles.projects} id={styles.ibm} style={{marginTop: "40px"}}>
             <p
               className={styles.textSubTitleProjects}
-              style={{
+              style={{ 
                 color: theme === "light" ? "#333" : "rgb(146, 145, 145)",
               }}
             >
