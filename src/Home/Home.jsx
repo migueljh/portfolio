@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 import styles from "./home.module.scss";
 import { Context } from "../App";
 /* import drawn_portrait from "../img/Home/migue copia 2 boca nueva1 sin fondo.png"; */
-import drawn_portrait from "./drawn_portrait.jpg";
+import drawn_portrait from "./undraw_Hacker_mindset_re_8a33.svg";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { en, es } from "./translate";
 import resume_es from "../img/Resume/Miguel_Hernandez_ES.pdf";
