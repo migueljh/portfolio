@@ -163,7 +163,7 @@ const Contact = () => {
     if (data.message) {
       setBlock(false);
       try {
-        let response = await axios.post("https://miguel-hernandez.herokuapp.com/send-email", {
+        let response = await axios.post("https://nodemailer-portfolio.herokuapp.com/send-email", {
           name: data.name,
           email: data.email,
           message: data.message, 
@@ -246,7 +246,7 @@ const Contact = () => {
             { !language ? null : language.value === "en" || language === "en" ? en.subtitle : es.subtitle}
           </p>
         </div>
-        {/* <div>
+        <div>
           {page === "first" ? (
             <>
               <div className={styles.formContainer}>
@@ -428,7 +428,7 @@ const Contact = () => {
               ) : null}
             </>
           ) : null}
-        </div> */}
+        </div>
       </form>
     </motion.div>
   );

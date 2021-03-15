@@ -14,7 +14,7 @@ server.post("/send-email", (req, res) => {
     service: "gmail",
     auth: {
       user: "mhwebcontact94@gmail.com",
-      pass: "Clumsy94",
+      pass: "Clumsy95",
     },
   });
 
@@ -39,6 +39,6 @@ server.post("/send-email", (req, res) => {
   });
 });
 
-server.listen(port, () => {
+server.listen(8080, () => {
   console.log("server running in port");
 });
