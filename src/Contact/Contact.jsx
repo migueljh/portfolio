@@ -215,6 +215,7 @@ const Contact = () => {
       variants={pageVariants}
       transition={pageTransition}
       style={{ height: "100%" }}
+      className={styles.divContactFather}
     >
       <form
         style={{

@@ -2,7 +2,8 @@ import React, { useEffect, useContext } from "react";
 import styles from "./home.module.scss";
 import { Context } from "../App";
 /* import drawn_portrait from "../img/Home/migue copia 2 boca nueva1 sin fondo.png"; */
-import drawn_portrait from "./migue copia 2 boca nueva1 sin fondo (2).png";
+import drawn_portrait from "../img/Home/Untitled (15).png";
+import drawn_portrait_dark from "../img/Home/Untitled (17).png";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { en, es } from "./translate";
 import resume_es from "../img/Resume/Miguel_Hernandez_ES.pdf";
@@ -133,7 +134,11 @@ const Home = () => {
           </div>
         </div>
         <div className={styles.person}>
-          <img src={drawn_portrait} className={styles.portrait} />
+          {theme === "light" ? (
+            <img src={drawn_portrait_dark} className={styles.portrait} />
+          ) : (
+            <img src={drawn_portrait} className={styles.portrait} />
+          )}
         </div>
       </div>
     </div>

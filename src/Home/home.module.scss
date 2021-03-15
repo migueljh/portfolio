@@ -19,12 +19,12 @@
 }
 
 .portrait {
-  width: 400px;
+  width: 450px;
   height: 450px;
   padding-top: 20px;
   margin-bottom: 40px;
-  /* border-radius: 200px;*/
-  margin-left: 30px; 
+  border-radius: 2000px;
+  margin-left: 30px !important; 
   animation: anim_text 3s forwards;
 }
 
