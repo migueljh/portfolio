@@ -3,6 +3,7 @@ import styles from "./projects.module.scss";
 import ecommerce from "../img/Projects/Henryfy/ecommercetickets.png";
 import moba from "../img/Projects/Moba/mobalogin.jpg";
 import underConstruction from "../img/Projects/under-construction.jpg";
+import aerolab from "../img/Projects/Aerolab/aerolab.PNG";
 import { Context } from "../App";
 import { Link } from "react-router-dom";
 import { pageTransition, pageVariants, projectTransition } from "../pages";
@@ -40,29 +41,44 @@ const Projects = () => {
   const onMouseOverEcommerce = () => {
     setText({
       ...text,
-      textEcommerce:  !language ? null : language.value === "en" || language === "en" ? en.ecommerce : es.ecommerce,
+      textEcommerce: !language
+        ? null
+        : language.value === "en" || language === "en"
+        ? en.ecommerce
+        : es.ecommerce,
     });
   };
 
   const onMouseOverMoba = () => {
     setText({
       ...text,
-      textMoba:  !language ? null : language.value === "en" || language === "en" ? en.moba : es.moba,
+      textMoba: !language
+        ? null
+        : language.value === "en" || language === "en"
+        ? en.moba
+        : es.moba,
     });
   };
 
-  const onMouseOverWeather = () => {
+  const onMouseOverAerolab = () => {
     setText({
       ...text,
-      textWeather:  !language ? null : language.value === "en" || language === "en" ? en.weather : es.weather,
+      textAerolab: !language
+        ? null
+        : language.value === "en" || language === "en"
+        ? en.aerolab
+        : es.aerolab,
     });
   };
 
   const onMouseOverMovie = () => {
     setText({
       ...text,
-      textMovie:
-       !language ? null : language.value === "en" || language === "en" ? en.movies : es.movies
+      textMovie: !language
+        ? null
+        : language.value === "en" || language === "en"
+        ? en.movies
+        : es.movies,
     });
   };
 
@@ -71,7 +87,7 @@ const Projects = () => {
       ...text,
       textEcommerce: "",
       textMoba: "",
-      textWeather: "",
+      textAerolab: "",
       textMovie: "",
     });
   };
@@ -99,7 +115,11 @@ const Projects = () => {
               color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
             }}
           >
-            { !language ? null : language.value === "en" || language === "en" ? en.title : es.title}
+            {!language
+              ? null
+              : language.value === "en" || language === "en"
+              ? en.title
+              : es.title}
           </p>
         </div>
         <div className={styles.container}>
@@ -110,7 +130,11 @@ const Projects = () => {
               width: "50%",
             }}
           >
-            { !language ? null : language.value === "en" || language === "en" ? en.subtitle : es.subtitle}
+            {!language
+              ? null
+              : language.value === "en" || language === "en"
+              ? en.subtitle
+              : es.subtitle}
           </p>
         </div>
         <div className={styles.container}>
@@ -122,7 +146,11 @@ const Projects = () => {
               marginTop: "20px",
             }}
           >
-            { !language ? null : language.value === "en" || language === "en" ? en.filter : es.filter}
+            {!language
+              ? null
+              : language.value === "en" || language === "en"
+              ? en.filter
+              : es.filter}
           </p>
         </div>
         <div className={styles.rowFilter}>
@@ -136,7 +164,11 @@ const Projects = () => {
                   color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
                 }}
               >
-               { !language ? null : language.value === "en" || language === "en" ? en.show_all : es.show_all}
+                {!language
+                  ? null
+                  : language.value === "en" || language === "en"
+                  ? en.show_all
+                  : es.show_all}
               </p>
               <div
                 className={styles.lineOne}
@@ -235,7 +267,7 @@ const Projects = () => {
               onClick={() => setCategory("bootstrap")}
             >
               <p
-              className={styles.bootstrap}
+                className={styles.bootstrap}
                 style={{
                   color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
                 }}
@@ -410,13 +442,29 @@ const Projects = () => {
             ></span>
             <span className={styles.msg}>
               {textAlert === "ecommerce"
-                ?  !language ? null : language.value === "en" || language === "en" ? en.ecommerce_alert : es.ecommerce_alert
+                ? !language
+                  ? null
+                  : language.value === "en" || language === "en"
+                  ? en.ecommerce_alert
+                  : es.ecommerce_alert
                 : textAlert === "moba"
-                ?  !language ? null : language.value === "en" || language === "en" ? en.moba_alert : es.moba_alert
+                ? !language
+                  ? null
+                  : language.value === "en" || language === "en"
+                  ? en.moba_alert
+                  : es.moba_alert
                 : textAlert === "weather"
-                ?  !language ? null : language.value === "en" || language === "en" ? en.weather_alert : es.weather_alert
+                ? !language
+                  ? null
+                  : language.value === "en" || language === "en"
+                  ? en.weather_alert
+                  : es.weather_alert
                 : textAlert === "movies"
-                ?  !language ? null : language.value === "en" || language === "en" ? en.movies_alert : es.movies_alert
+                ? !language
+                  ? null
+                  : language.value === "en" || language === "en"
+                  ? en.movies_alert
+                  : es.movies_alert
                 : null}
             </span>
             <span className={styles.closeBtn}>
@@ -455,7 +503,7 @@ const Projects = () => {
                 <span>
                   <p className={styles.projectsRowTitle}>
                     Henryfy{" "}
-                   {/*  <i
+                    {/*  <i
                       class="fas fa-info-circle fa-0.5x"
                       id={styles.infoIcon}
                       onClick={() => {
@@ -544,15 +592,12 @@ const Projects = () => {
           </div>
 
           <div className={styles.containerRow} id={styles.secondContainerRow}>
-            {category === "showAll" ? (
+            {category === "showAll" ||
+            category === "react" ||
+            category === "redux" ? (
               <motion.div
                 className={styles.projectsRow}
                 style={{ backgroundColor: "white", height: "202px" }}
-                onClick={() => {
-                  setShowAlert(true);
-                  setAnimate(true);
-                  setTextAlert("weather");
-                }}
                 initial="initial"
                 animate="in"
                 exit="out"
@@ -560,34 +605,27 @@ const Projects = () => {
                 transition={projectTransition}
               >
                 <span>
-                  <p className={styles.projectsRowTitle}>
-                    Weather App{" "}
-                    <i 
-                      class="fas fa-info-circle fa-0.5x"
-                      id={styles.infoIcon}
-                      onClick={() => {
-                        setShowAlert(true);
-                        setAnimate(true);
-                        setTextAlert("weather");
-                      }}
-                    ></i>
-                  </p>
+                  <p className={styles.projectsRowTitle}>Aerolab Challenge </p>
                 </span>
-                {/* <Link to="/projects/weather-app"> */}
-                <div
-                  className={styles.curtainBelow}
-                  onMouseEnter={onMouseOverWeather}
-                  onMouseLeave={onMouseLeave}
-                >
-                  <p
-                    className={styles.projectsRowSubTitle}
-                    style={{ marginTop: "30px" }}
+                <a href="https://aerolab-challenge-puce.vercel.app/">
+                  <div
+                    className={styles.curtainBelow}
+                    onMouseEnter={onMouseOverAerolab}
+                    onMouseLeave={onMouseLeave}
                   >
-                    {text.textWeather}
-                  </p>
-                </div>
-                <img src={underConstruction} className={styles.imgSecondRow} />
-                {/* </Link> */}
+                    <p
+                      className={styles.projectsRowSubTitle}
+                      style={{ marginTop: "30px" }}
+                    >
+                      {text.textAerolab}
+                    </p>
+                  </div>
+                  <img
+                    src={aerolab}
+                    className={styles.imgSecondRow}
+                    style={{ width: "100%" }}
+                  />
+                </a>
               </motion.div>
             ) : null}
             {category === "showAll" ? (
