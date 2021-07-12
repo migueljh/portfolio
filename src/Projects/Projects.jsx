@@ -597,7 +597,7 @@ const Projects = () => {
             category === "redux" ? (
               <motion.div
                 className={styles.projectsRow}
-                style={{ backgroundColor: "white", height: "202px" }}
+                style={{ backgroundColor: "white", height: "202px"}}
                 initial="initial"
                 animate="in"
                 exit="out"
@@ -623,7 +623,8 @@ const Projects = () => {
                   <img
                     src={aerolab}
                     className={styles.imgSecondRow}
-                    style={{ width: "100%" }}
+                    style={{ width: "auto"}}
+                    alt="aerolab_challenge"
                   />
                 </a>
               </motion.div>

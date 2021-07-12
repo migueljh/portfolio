@@ -1,6 +1,5 @@
 .projectContainer {
   width: 100%;
- 
 }
 
 .container {
@@ -29,10 +28,10 @@
 .rowColumn {
   box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
     2px 2px 8px rgba(0, 0, 0, 0.15);
-    height: 80px;
-    align-items: center;
-    display: flex;
-    width: 300px;
+  height: 80px;
+  align-items: center;
+  display: flex;
+  width: 300px;
 }
 
 .rowColumn p {
@@ -98,6 +97,7 @@
   text-align: center;
   box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
     2px 2px 8px rgba(0, 0, 0, 0.15), 2px 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .projectsRowTitle {
@@ -190,7 +190,6 @@
   font-weight: 700;
 }
 
-
 .alert.show {
   animation: show_slide 1s ease forwards;
 }
@@ -207,6 +206,7 @@
   padding: 20px 18px;
   position: absolute;
   cursor: pointer;
+  height: auto;
 }
 
 .closeBtn .fa-times {
@@ -314,7 +314,6 @@
   }
 }
 
-
 @keyframes show_slide {
   0% {
     transform: translateY(100%);
@@ -333,11 +332,11 @@
 /* responsive */
 
 @media only screen and (max-width: 800px) {
-  .container{
+  .container {
     text-align: center;
     margin-bottom: 20px;
   }
-  .rowColumn{
+  .rowColumn {
     width: 85px;
     text-align: center;
     height: 80px;
@@ -345,51 +344,50 @@
     display: flex;
     justify-content: center;
   }
-  .rowColumn p{
+  .rowColumn p {
     margin-left: -80px;
     font-size: 10px;
-    white-space: pre-line
+    white-space: pre-line;
   }
-  .rowColumn .bootstrap{
-    margin-left: -84px
+  .rowColumn .bootstrap {
+    margin-left: -84px;
   }
   .lineOne {
     margin-left: 1px;
-   
   }
-  
+
   .lineTwo {
     margin-top: -60px;
     width: 10px;
     margin-left: 0px;
   }
-  
+
   .rowFilter span:hover .lineOne {
     width: 84px;
   }
   .containerRow {
     display: flex;
     flex-direction: column;
-    justify-content:unset;
+    justify-content: unset;
     align-items: center;
     margin-top: 60px;
     width: 70%;
-    margin-left:55px;
+    margin-left: 55px;
   }
 
-  .curtainBelow{
+  .curtainBelow {
     display: none;
   }
-  .projectsRowSubTitle{
+  .projectsRowSubTitle {
     display: none;
   }
-  .curtain{
+  .curtain {
     display: none;
   }
-  #infoIcon{
+  #infoIcon {
     display: none;
   }
-  #secondContainerRow{
+  #secondContainerRow {
     margin-top: 0px;
   }
 }
