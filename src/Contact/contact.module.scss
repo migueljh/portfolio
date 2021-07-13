@@ -92,7 +92,7 @@
 .contentName {
   position: absolute;
   bottom: 4px;
-  left: 30px;
+  margin-left: 30px;
   transition: all 0.3s ease;
 }
 
@@ -116,15 +116,10 @@
 
 #iconInput {
   position: absolute;
-  left: 94px;
   font-size: 18px;
   color: rgb(146, 145, 145);
   font-weight: 800;
   margin-top: -2px;
-}
-
-.containerIcon {
-  display: flex;
 }
 
 .btnContainer {

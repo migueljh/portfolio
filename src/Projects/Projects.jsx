@@ -1,20 +1,17 @@
-import React, { useState, useRef, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styles from "./projects.module.scss";
 import ecommerce from "../img/Projects/Henryfy/ecommercetickets.png";
 import moba from "../img/Projects/Moba/mobalogin.jpg";
 import underConstruction from "../img/Projects/under-construction.jpg";
 import aerolab from "../img/Projects/Aerolab/aerolab.PNG";
 import { Context } from "../App";
-import { Link } from "react-router-dom";
 import { pageTransition, pageVariants, projectTransition } from "../pages";
 import { motion } from "framer-motion";
 import { en, es } from "./translate";
+import ProjectBox from "./ProjectBox";
 
 const Projects = () => {
   const { screen, setScreen, theme, language } = useContext(Context);
-  const [showAlert, setShowAlert] = useState(false);
-  const [animate, setAnimate] = useState(false);
-  const [textAlert, setTextAlert] = useState("");
   const [category, setCategory] = useState("");
   const [text, setText] = useState({
     textEcommerce: "",
@@ -22,6 +19,7 @@ const Projects = () => {
     textWeather: "",
     textMovie: "",
   });
+  let fontStyles = theme === "dark" ? "rgb(146, 145, 145)" : "#333";
 
   useEffect(() => {
     setScreen("project");
@@ -106,7 +104,7 @@ const Projects = () => {
     >
       <div
         className={styles.projectsContainer}
-        style={{ display: screen === "menu" ? "none" : null }}
+        style={{ display: screen === "menu" ?? "none" }}
       >
         <div className={styles.container}>
           <p
@@ -115,18 +113,14 @@ const Projects = () => {
               color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
             }}
           >
-            {!language
-              ? null
-              : language.value === "en" || language === "en"
-              ? en.title
-              : es.title}
+            {language.value === "en" || language === "en" ? en.title : es.title}
           </p>
         </div>
         <div className={styles.container}>
           <p
             className={styles.textSubTitle}
             style={{
-              color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
+              color: fontStyles,
               width: "50%",
             }}
           >
@@ -142,7 +136,7 @@ const Projects = () => {
             className={styles.textSubTitle}
             style={{
               fontSize: "20px",
-              color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
+              color: fontStyles,
               marginTop: "20px",
             }}
           >
@@ -183,13 +177,7 @@ const Projects = () => {
               className={styles.rowColumn}
               onClick={() => setCategory("react")}
             >
-              <p
-                style={{
-                  color: theme === "dark" ? "rgb(146, 145, 145)" : "#333",
-                }}
-              >
-                ReactJS
-              </p>
+              <p style={{ color: fontStyles }}>ReactJS</p>
               <div
                 className={styles.lineOne}
                 style={{
@@ -409,76 +397,6 @@ const Projects = () => {
           </div>
         </div>
 
-        {showAlert === false ? (
-          <div
-            className={styles.alert}
-            style={animate ? mountedStyle : unmountedStyle}
-          >
-            <span
-              className="fas fa-exclamation-circle"
-              id={styles.exclamationCircle}
-            ></span>
-            <span className={styles.msg}>
-              <p style={{ color: "black" }}>Currently in deployment</p>
-            </span>
-            <span className={styles.closeBtn}>
-              <span
-                className="fas fa-times"
-                id={styles.times}
-                onClick={() => {
-                  setShowAlert(false);
-                }}
-              ></span>
-            </span>
-          </div>
-        ) : (
-          <div
-            className={styles.alert}
-            style={animate ? mountedStyle : unmountedStyle}
-          >
-            <span
-              className="fas fa-exclamation-circle "
-              id={styles.exclamationCircle}
-            ></span>
-            <span className={styles.msg}>
-              {textAlert === "ecommerce"
-                ? !language
-                  ? null
-                  : language.value === "en" || language === "en"
-                  ? en.ecommerce_alert
-                  : es.ecommerce_alert
-                : textAlert === "moba"
-                ? !language
-                  ? null
-                  : language.value === "en" || language === "en"
-                  ? en.moba_alert
-                  : es.moba_alert
-                : textAlert === "weather"
-                ? !language
-                  ? null
-                  : language.value === "en" || language === "en"
-                  ? en.weather_alert
-                  : es.weather_alert
-                : textAlert === "movies"
-                ? !language
-                  ? null
-                  : language.value === "en" || language === "en"
-                  ? en.movies_alert
-                  : es.movies_alert
-                : null}
-            </span>
-            <span className={styles.closeBtn}>
-              <span
-                className="fas fa-times"
-                id={styles.exclamationCircleOpen}
-                onClick={() => {
-                  setShowAlert(false);
-                  setAnimate(false);
-                }}
-              ></span>
-            </span>
-          </div>
-        )}
         <div className={styles.projects}>
           <div className={styles.containerRow}>
             {category === "showAll" ||
@@ -500,44 +418,21 @@ const Projects = () => {
                 variants={pageVariants}
                 transition={projectTransition}
               >
-                <span>
-                  <p className={styles.projectsRowTitle}>
-                    Henryfy{" "}
-                    {/*  <i
-                      class="fas fa-info-circle fa-0.5x"
-                      id={styles.infoIcon}
-                      onClick={() => {
-                        setShowAlert(true);
-                        setAnimate(true);
-                        setTextAlert("ecommerce");
-                      }}
-                    ></i> */}
-                  </p>
-                </span>
-                <Link to="/projects/henryfy">
-                  <div
-                    className={styles.curtain}
-                    onMouseEnter={onMouseOverEcommerce}
-                    onMouseLeave={onMouseLeave}
-                  >
-                    <p
-                      className={styles.projectsRowSubTitle}
-                      style={{ marginTop: "25px" }}
-                    >
-                      {text.textEcommerce}
-                    </p>
-                  </div>
-                  <img
-                    src={ecommerce}
-                    className={styles.imgFirstRow}
-                    style={{
-                      width: "350px",
-                    }}
-                  />
-                </Link>
+                <ProjectBox
+                  title={styles.projectsRowTitle}
+                  projectTitle="Henryfy"
+                  curtain={styles.curtain}
+                  onMouseOver={onMouseOverEcommerce}
+                  onMouseLeave={onMouseLeave}
+                  subtitle={styles.projectsRowSubTitle}
+                  textCurtain={text.textEcommerce}
+                  srcImg={ecommerce}
+                  classnameImg={styles.imgFirstRow}
+                  urlName="henryfy"
+                />
               </motion.div>
             ) : null}
-            {category === "showAll" ||
+            {/*  {category === "showAll" ||
             category === "reactNative" ||
             category === "redux" ||
             category === "node" ||
@@ -553,20 +448,10 @@ const Projects = () => {
                 exit="out"
                 variants={pageVariants}
                 transition={projectTransition}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 <span>
-                  <p className={styles.projectsRowTitle}>
-                    MOBA{" "}
-                    <i
-                      class="fas fa-info-circle fa-0.5x"
-                      id={styles.infoIcon}
-                      onClick={() => {
-                        setShowAlert(true);
-                        setAnimate(true);
-                        setTextAlert("moba");
-                      }}
-                    ></i>
-                  </p>
+                  <p className={styles.projectsRowTitle}>MOBA </p>
                 </span>
                 <Link to="/projects/moba">
                   <div
@@ -585,19 +470,20 @@ const Projects = () => {
                     src={moba}
                     className={styles.imgFirstRow}
                     style={{ width: "120px" }}
+                    alt=""
                   />
                 </Link>
               </motion.div>
-            ) : null}
+            ) : null} */}
           </div>
 
-          <div className={styles.containerRow} id={styles.secondContainerRow}>
+          {/*  <div className={styles.containerRow} id={styles.secondContainerRow}>
             {category === "showAll" ||
             category === "react" ||
             category === "redux" ? (
               <motion.div
                 className={styles.projectsRow}
-                style={{ backgroundColor: "white", height: "202px"}}
+                style={{ backgroundColor: "white", height: "202px" }}
                 initial="initial"
                 animate="in"
                 exit="out"
@@ -623,59 +509,13 @@ const Projects = () => {
                   <img
                     src={aerolab}
                     className={styles.imgSecondRow}
-                    style={{ width: "auto"}}
+                    style={{ width: "auto" }}
                     alt="aerolab_challenge"
                   />
                 </a>
               </motion.div>
             ) : null}
-            {category === "showAll" ? (
-              <motion.div
-                className={styles.projectsRow}
-                style={{ backgroundColor: "white", height: "202px" }}
-                onClick={() => {
-                  setShowAlert(true);
-                  setAnimate(true);
-                  setTextAlert("movies");
-                }}
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={projectTransition}
-              >
-                <span>
-                  <p className={styles.projectsRowTitle}>
-                    Movies Finder{" "}
-                    <i
-                      class="fas fa-info-circle fa-0.5x"
-                      id={styles.infoIcon}
-                      onClick={() => {
-                        setShowAlert(true);
-                        setAnimate(true);
-                        setTextAlert("movies");
-                      }}
-                    ></i>
-                  </p>
-                </span>
-                {/* <Link to="/projects/movies-finder"> */}
-                <div
-                  className={styles.curtainBelow}
-                  onMouseEnter={onMouseOverMovie}
-                  onMouseLeave={onMouseLeave}
-                >
-                  <p
-                    className={styles.projectsRowSubTitle}
-                    style={{ marginTop: "30px" }}
-                  >
-                    {text.textMovie}
-                  </p>
-                </div>
-                <img src={underConstruction} className={styles.imgSecondRow} />
-                {/* </Link> */}
-              </motion.div>
-            ) : null}
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.div>
