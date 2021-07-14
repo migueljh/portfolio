@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./Home/Home";
-import ProjectsRefactor from "./Projects/ProjectsRefactor";
+import Projects from "./Projects/Projects";
 import WorkExperience from "./WorkExperience/WorkExperience";
 import Contact from "./Contact/Contact";
 import Menu from "./Menu/Menu";
@@ -12,6 +12,7 @@ import WeatherApp from "./Projects/WeatherApp/WeatherApp";
 import MoviesFinder from "./Projects/MoviesFinder/MoviesFinder";
 import Footer from "./Footer/Footer";
 import Loading from "./ScreenLoader";
+import Aerolab from "./Projects/Aerolab/Aerolab";
 import { AnimatePresence } from "framer-motion";
 
 export const Context = React.createContext({
@@ -62,15 +63,10 @@ function App() {
         >
           <Route path="/" component={Menu} />
           <Route exact path="/" component={Home} />
-          <Route exact path="/projects" component={ProjectsRefactor} />
+          <Route exact path="/projects" component={Projects} />
           <Route exact path="/projects/henryfy" component={Henryfy} />
           <Route exact path="/projects/moba" component={Moba} />
-          <Route exact path="/projects/weather-app" component={WeatherApp} />
-          <Route
-            exact
-            path="/projects/movies-finder"
-            component={MoviesFinder}
-          />
+          <Route exact path="/projects/aerolab" component={Aerolab} />
           <Route exact path="/resume" component={WorkExperience} />
           <Route exact path="/contact" component={Contact} />
           <Route path="/" component={Footer} />
