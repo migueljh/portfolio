@@ -1,5 +1,5 @@
 const Aerolab = () => {
-  window.location.href = "https://aerolab-challenge-puce.vercel.app/";
+  window.location.replace("https://aerolab-challenge-puce.vercel.app/");
 };
 
 export default Aerolab;
